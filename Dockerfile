@@ -11,7 +11,7 @@ COPY . ./
 # --- STAGE 2: Development Runtime (Includes and run 'air'for hot-reloading) ---
 FROM base as dev
 
-RUN go install github.com/air-verse/air@latest
+RUN go install github.com/air-verse/air@v1.62.0
 
 CMD ["air", "-c", ".air.toml"]
 
