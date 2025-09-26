@@ -20,6 +20,7 @@ var dolar bot.SlashCommand = bot.SlashCommand{
 			subcommands.Estado.Metadata,
 			subcommands.Oficial.Metadata,
 			subcommands.Paralelo.Metadata,
+			subcommands.All.Metadata,
 		},
 	},
 	Handler: func(s *discordgo.Session, i *discordgo.InteractionCreate, ctx *bot.BotContext) error {
@@ -32,6 +33,8 @@ var dolar bot.SlashCommand = bot.SlashCommand{
 			return subcommands.Oficial.Handler(s, i, ctx)
 		case "paralelo":
 			return subcommands.Paralelo.Handler(s, i, ctx)
+		case "all":
+			return subcommands.All.Handler(s, i, ctx)
 		default:
 			bot.GetInteractionFailedResponse(s, i, "El subcomando llamado no existe.")
 			return fmt.Errorf("Subcommand doesn't exist\n")
