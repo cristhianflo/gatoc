@@ -30,7 +30,7 @@ var ping bot.SlashCommand = bot.SlashCommand{
 				},
 				{
 					Name:   "GatoVersión",
-					Value:  "```fix\n1.1.1\n```",
+					Value:  "```fix\n1.2.0\n```",
 					Inline: true,
 				},
 			},
