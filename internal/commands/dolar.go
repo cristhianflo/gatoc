@@ -18,6 +18,7 @@ var dolar bot.SlashCommand = bot.SlashCommand{
 		Description: "Cotización del dolar a bolívares",
 		Options: []*discordgo.ApplicationCommandOption{
 			subcommands.Estado.Metadata,
+			subcommands.Oficial.Metadata,
 		},
 	},
 	Handler: func(s *discordgo.Session, i *discordgo.InteractionCreate, ctx *bot.BotContext) error {
@@ -26,6 +27,8 @@ var dolar bot.SlashCommand = bot.SlashCommand{
 		switch options[0].Name {
 		case "estado":
 			return subcommands.Estado.Handler(s, i, ctx)
+		case "oficial":
+			return subcommands.Oficial.Handler(s, i, ctx)
 		default:
 			bot.GetInteractionFailedResponse(s, i, "El subcomando llamado no existe.")
 			return fmt.Errorf("Subcommand doesn't exist\n")
