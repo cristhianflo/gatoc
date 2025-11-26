@@ -1,6 +1,6 @@
 services:
   bot:
-    image: ghcr.io/bachacode/gatoc-bot:${GIT_COMMIT_HASH:-latest}
+    image: ghcr.io/cristhianflo/gatoc-bot:${GIT_COMMIT_HASH:-latest}
     secrets:
       - token
       - client-id
