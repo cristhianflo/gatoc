@@ -1,6 +1,7 @@
 package events
 
 import (
+	"errors"
 	"fmt"
 	"net/url"
 	"regexp"
@@ -50,6 +51,10 @@ var messageCreate bot.Event = bot.Event{
 func HandleResponses(s *discordgo.Session, m *discordgo.MessageCreate, db *gorm.DB) error {
 	var response database.ResponseMessage
 	result := db.Where("message = ?", strings.ToLower(m.Content)).First(&response)
+
+	if errors.Is(result.Error, gorm.ErrRecordNotFound) {
+		return nil
+	}
 
 	if result.Error != nil {
 		fmt.Printf("Failed to get response message: %v\n", result.Error)
