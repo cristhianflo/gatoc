@@ -191,8 +191,8 @@ func fixRedditEmbed(m *discordgo.MessageCreate, url string, fixedUrl string) str
 
 func fixInstagramEmbed(m *discordgo.MessageCreate, url string, fixedUrl string) string {
 	mention := fmt.Sprintf("<@%s>", m.Author.ID)
-	ddinstagramURL := strings.Replace(url, "instagram.com", "ddinstagram.com", 1)
+	fixedInstagramURL := strings.Replace(url, "instagram.com", "kkinstagram.com", 1)
 
-	fixedEmbedMessageContent := fmt.Sprintf("[Instagram](%s) • [Fix](%s) • Enviado por %s ", fixedUrl, ddinstagramURL, mention)
+	fixedEmbedMessageContent := fmt.Sprintf("[Instagram](%s) • [Fix](%s) • Enviado por %s ", fixedUrl, fixedInstagramURL, mention)
 	return fixedEmbedMessageContent
 }
