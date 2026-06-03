@@ -1,26 +1,25 @@
 services:
   bot:
     image: ghcr.io/cristhianflo/gatoc-bot:${GIT_COMMIT_HASH:-latest}
+    networks:
+      - bot-network
     secrets:
       - token
       - client-id
       - guild-id
       - main-channel-id
-      - db-host
-      - db-user
       - db-pass
-      - db-name
     environment:
-      - TOKEN_FILE=/run/secrets/token
-      - CLIENT_ID_FILE=/run/secrets/client-id
-      - GUILD_ID_FILE=/run/secrets/guild-id
-      - MAIN_CHANNEL_ID_FILE=/run/secrets/main-channel-id
-      - DB_HOST_FILE=/run/secrets/db-host
-      - DB_USER_FILE=/run/secrets/db-user
-      - DB_PASS_FILE=/run/secrets/db-pass
-      - DB_NAME_FILE=/run/secrets/db-name
-      - DB_PORT=5432
-      - DB_SSL=require
+      TOKEN_FILE: /run/secrets/token
+      CLIENT_ID_FILE: /run/secrets/client-id
+      GUILD_ID_FILE: /run/secrets/guild-id
+      MAIN_CHANNEL_ID_FILE: /run/secrets/main-channel-id
+      DB_HOST: db
+      DB_USER: postgres
+      DB_PASS_FILE: /run/secrets/db-pass
+      DB_NAME: gatoc_bot
+      DB_PORT: 5432
+      DB_SSL: prefer
     deploy:
       update_config:
         order: start-first
@@ -29,6 +28,26 @@ services:
         delay: 5s
         max_attempts: 3
         window: 120s
+    depends_on:
+      - db
+  db:
+    image: postgres:16
+    networks:
+      - bot-network
+    secrets:
+      - db-pass
+    environment:
+      POSTGRES_DB: gatoc_bot
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD_FILE: /run/secrets/db-pass
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d gatoc_bot"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
 
 secrets:
   token:
@@ -39,11 +58,10 @@ secrets:
     external: true
   main-channel-id:
     external: true
-  db-host:
-    external: true
-  db-user:
-    external: true
   db-pass:
     external: true
-  db-name:
-    external: true
+volumes:
+  db-data:
+networks:
+  bot-network:
+    driver: overlay
