@@ -31,11 +31,6 @@ var ping bot.SlashCommand = bot.SlashCommand{
 					Inline: true,
 				},
 				{
-					Name:   "GatoCommit",
-					Value:  fmt.Sprintf("```fix\n%s\n```", version.GitCommit),
-					Inline: true,
-				},
-				{
 					Name:   "GatoBuildTime",
 					Value:  fmt.Sprintf("```fix\n%s\n```", version.BuildTime),
 					Inline: false,

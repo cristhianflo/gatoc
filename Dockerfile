@@ -18,7 +18,7 @@ CMD ["air", "-c", ".air.toml"]
 # --- STAGE 3: Build stage (Compiles the go binary) ---
 FROM base AS build
 
-RUN CGO_ENABLED=0 GOOS=linux go build -ldflags "-X 'github.com/bachacode/gatoc/internal/version.Version=1.3.0' \ 
+RUN CGO_ENABLED=0 GOOS=linux go build -ldflags "-X 'github.com/bachacode/gatoc/internal/version.Version=1.3.0' \
     -X 'github.com/bachacode/gatoc/internal/version.BuildDate=$(date -u +%Y-%m-%dT%H:%M:%SZ)'" \
     -o bot ./cmd/bot/main.go
 
