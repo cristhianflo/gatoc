@@ -7,7 +7,6 @@ import (
 	"github.com/bachacode/gatoc/internal/bot"
 	"github.com/bachacode/gatoc/internal/config"
 	"github.com/bachacode/gatoc/internal/database"
-	"github.com/bachacode/gatoc/internal/features/commander"
 	"github.com/bachacode/gatoc/internal/features/embedfixer"
 	"github.com/bachacode/gatoc/internal/features/finance"
 	"github.com/bachacode/gatoc/internal/features/members"
@@ -36,7 +35,6 @@ func main() {
 		finance.NewFeature(),
 		parrot.NewFeature(),
 		embedfixer.NewFeature(),
-		commander.NewFeature(),
 	}
 
 	bb := bot.NewBotBuilder(cfg.BotConfig)

@@ -51,6 +51,11 @@ func (b *bot) SetupEvents() {
 			return
 		}
 
+		cmd := GetCommand(i.ApplicationCommandData().Name)
+		if err := cmd.Handler(s, i, b.BotContext); err != nil {
+			fmt.Printf("Failed to run interaction: %v\n", err)
+		}
+
 		for _, handler := range b.eventRouter.interactionCreateHandlers {
 			if err := handler(s, i, b.BotContext); err != nil {
 				b.Logger.Printf("Middleware error on InteractionCreate: %v", err)
