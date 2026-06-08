@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/bachacode/gatoc/internal/bot"
+	"github.com/bachacode/gatoc/internal/version"
 	"github.com/bwmarrin/discordgo"
 )
 
@@ -26,10 +27,23 @@ var ping bot.SlashCommand = bot.SlashCommand{
 				},
 				{
 					Name:   "GatoVersión",
-					Value:  "```fix\n1.2.2\n```",
+					Value:  fmt.Sprintf("```fix\n%s\n```", version.Version),
 					Inline: true,
 				},
+				{
+					Name:   "GatoCommit",
+					Value:  fmt.Sprintf("```fix\n%s\n```", version.GitCommit),
+					Inline: true,
+				},
+				{
+					Name:   "GatoBuildTime",
+					Value:  fmt.Sprintf("```fix\n%s\n```", version.BuildTime),
+					Inline: false,
+				},
 			},
+			Footer: &discordgo.MessageEmbedFooter{
+			Text: "Hecho con 💙 y 🐱",
+		},
 		}
 		err := s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
 			Type: discordgo.InteractionResponseChannelMessageWithSource,
