@@ -87,14 +87,7 @@ func (bb *BotBuilder) Build() (*bot, error) {
 		intents:     bb.intents,
 		BotContext:  botCtx,
 		eventRouter: bb.eventRouter,
-	}
-
-	// Create commands
-	if len(bb.commands) > 0 {
-		botCtx.Logger.Println("INFO: Creating commands...")
-		b.commands = bb.commands
-	} else {
-		botCtx.Logger.Println("WARN: No commands provided, bot will start without any registered commands")
+		commands:    bb.commands,
 	}
 
 	botCtx.Logger.Println("INFO: Bot instance successfully built")
