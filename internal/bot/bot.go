@@ -51,7 +51,7 @@ func (b *bot) SetupEvents() {
 			return
 		}
 
-		cmd := GetCommand(i.ApplicationCommandData().Name)
+		cmd := bot.commands[i.ApplicationCommandData().Name]
 		if err := cmd.Handler(s, i, b.BotContext); err != nil {
 			fmt.Printf("Failed to run interaction: %v\n", err)
 		}

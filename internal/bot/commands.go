@@ -16,16 +16,6 @@ type SlashSubcommand struct {
 	Handler  func(s *discordgo.Session, i *discordgo.InteractionCreate, ctx *BotContext) error
 }
 
-var commandRegistry = make(map[string]SlashCommand)
-
-func RegisterCommand(name string, cmd SlashCommand) {
-	commandRegistry[name] = cmd
-}
-
-func GetCommand(name string) SlashCommand {
-	return commandRegistry[name]
-}
-
 func GetInteractionFailedResponse(s *discordgo.Session, i *discordgo.InteractionCreate, content string) error {
 	message := "Ha ocurrido un error ejecutando el comando."
 
