@@ -23,13 +23,13 @@ var dollar bot.SlashCommand = bot.SlashCommand{
 		options := i.ApplicationCommandData().Options
 
 		switch options[0].Name {
-		case "estado":
+		case subcommands.DollarStatus.Metadata.Name:
 			return subcommands.DollarStatus.Handler(s, i, ctx)
-		case "oficial":
+		case subcommands.DollarBcv.Metadata.Name:
 			return subcommands.DollarBcv.Handler(s, i, ctx)
-		case "paralelo":
+		case subcommands.DollarParalelo.Metadata.Name:
 			return subcommands.DollarParalelo.Handler(s, i, ctx)
-		case "all":
+		case subcommands.DollarAll.Metadata.Name:
 			return subcommands.DollarAll.Handler(s, i, ctx)
 		default:
 			bot.GetInteractionFailedResponse(s, i, "El subcomando llamado no existe.")
