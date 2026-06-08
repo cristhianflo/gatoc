@@ -19,32 +19,84 @@ type BotContext struct {
 }
 
 type bot struct {
-	session  *discordgo.Session
-	intents  discordgo.Intent
-	commands map[string]SlashCommand
-	events   []Event
+	session     *discordgo.Session
+	intents     discordgo.Intent
+	commands    map[string]SlashCommand
+	eventRouter *EventRouter
 	*BotContext
 }
 
 func (b *bot) Setup() {
 	b.Logger.Println("INFO: Setting bot events...")
-	b.setEventHandlers()
+	b.SetupEvents()
 
 	b.Logger.Println("INFO: Registering commands...")
 	b.registerCommands()
 }
 
-func (b *bot) setEventHandlers() {
-	for _, event := range b.events {
-		if event.Once {
-			b.session.AddHandlerOnce(event.Handler(b.BotContext))
-			b.Logger.Printf("INFO: Registered event: %s as once event\n", event.Name)
-		} else {
-			b.session.AddHandler(event.Handler(b.BotContext))
-			b.Logger.Printf("INFO: Registered event: %s as normal event\n", event.Name)
+func (b *bot) SetupEvents() {
+	// 1. Ready Event Dispatcher
+	b.session.AddHandlerOnce(func(s *discordgo.Session, r *discordgo.Ready) {
+		log.Printf("Logged in as: %v#%v", s.State.User.Username, s.State.User.Discriminator)
+		for _, handler := range b.eventRouter.readyHandlers {
+			if err := handler(s, r, b.BotContext); err != nil {
+				b.Logger.Printf("Middleware error on Ready: %v", err)
+			}
 		}
-	}
-	b.Logger.Println("INFO: All events were register successfully!")
+	})
+
+	// 2. Core Interaction Create Dispatcher
+	b.session.AddHandler(func(s *discordgo.Session, i *discordgo.InteractionCreate) {
+		if i.Type != discordgo.InteractionApplicationCommand {
+			return
+		}
+
+		for _, handler := range b.eventRouter.interactionCreateHandlers {
+			if err := handler(s, i, b.BotContext); err != nil {
+				b.Logger.Printf("Middleware error on InteractionCreate: %v", err)
+			}
+		}
+	})
+
+	// 3. Core Message Create Dispatcher
+	b.session.AddHandler(func(s *discordgo.Session, m *discordgo.MessageCreate) {
+		if m.Author.ID == s.State.User.ID || m.Author.Bot {
+			return
+		}
+
+		for _, handler := range b.eventRouter.messageCreateHandlers {
+			if err := handler(s, m, b.BotContext); err != nil {
+				b.Logger.Printf("Middleware error on MessageCreate: %v", err)
+			}
+		}
+	})
+
+	// 4. Core Guild Member Add Dispatcher
+	b.session.AddHandler(func(s *discordgo.Session, m *discordgo.GuildMemberAdd) {
+		for _, handler := range b.eventRouter.guildMemberAddHandlers {
+			if err := handler(s, m, b.BotContext); err != nil {
+				b.Logger.Printf("Middleware error on GuildMemberAdd: %v", err)
+			}
+		}
+	})
+
+	// 5. Core Guild Member Remove Dispatcher
+	b.session.AddHandler(func(s *discordgo.Session, m *discordgo.GuildMemberRemove) {
+		for _, handler := range b.eventRouter.guildMemberRemoveHandlers {
+			if err := handler(s, m, b.BotContext); err != nil {
+				b.Logger.Printf("Middleware error on GuildMemberRemove: %v", err)
+			}
+		}
+	})
+
+	// 6. Core Message Reaction Add Dispatcher
+	b.session.AddHandler(func(s *discordgo.Session, r *discordgo.MessageReactionAdd) {
+		for _, handler := range b.eventRouter.messageReactionAddHandlers {
+			if err := handler(s, r, b.BotContext); err != nil {
+				b.Logger.Printf("Middleware error on MessageReactionAdd: %v", err)
+			}
+		}
+	})
 }
 
 func (b *bot) registerCommands() {

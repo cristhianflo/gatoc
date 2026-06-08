@@ -16,20 +16,20 @@ type BotBuilder struct {
 	cfg *config.BotConfig
 
 	// Optional dependencies/configurations
-	db             *gorm.DB
-	logger         *log.Logger
-	intents        discordgo.Intent
-	customCommands map[string]SlashCommand
-	customEvents   []Event
+	db          *gorm.DB
+	logger      *log.Logger
+	intents     discordgo.Intent
+	commands    map[string]SlashCommand
+	eventRouter *EventRouter
 }
 
 func NewBotBuilder(cfg *config.BotConfig) *BotBuilder {
 	return &BotBuilder{
-		cfg:            cfg,
-		logger:         log.New(os.Stdout, "[DEFAULT_BOT] ", log.LstdFlags|log.Lshortfile),
-		intents:        discordgo.IntentGuildMessages,
-		customCommands: make(map[string]SlashCommand),
-		customEvents:   make([]Event, 0),
+		cfg:         cfg,
+		logger:      log.New(os.Stdout, "[DEFAULT_BOT] ", log.LstdFlags|log.Lshortfile),
+		intents:     discordgo.IntentGuildMessages,
+		commands:    make(map[string]SlashCommand),
+		eventRouter: NewEventRouter(),
 	}
 }
 
@@ -48,13 +48,14 @@ func (bb *BotBuilder) WithIntents(intents discordgo.Intent) *BotBuilder {
 	return bb
 }
 
-func (bb *BotBuilder) WithCustomCommands(cmds map[string]SlashCommand) *BotBuilder {
-	bb.customCommands = cmds
-	return bb
-}
+func (bb *BotBuilder) WithFeatures(f []Feature) *BotBuilder {
+	for _, feature := range f {
+		for _, cmd := range feature.SlashCommands() {
+			bb.commands[cmd.Metadata.Name] = cmd
+		}
 
-func (bb *BotBuilder) WithCustomEvents(evts []Event) *BotBuilder {
-	bb.customEvents = evts
+		feature.RegisterEvents(bb.eventRouter)
+	}
 	return bb
 }
 
@@ -82,27 +83,18 @@ func (bb *BotBuilder) Build() (*bot, error) {
 
 	// Create new bot struct
 	b := &bot{
-		session:    s,
-		intents:    bb.intents,
-		BotContext: botCtx,
+		session:     s,
+		intents:     bb.intents,
+		BotContext:  botCtx,
+		eventRouter: bb.eventRouter,
 	}
 
 	// Create commands
-	if len(bb.customCommands) > 0 {
-		b.commands = bb.customCommands
-		botCtx.Logger.Println("INFO: Using custom commands")
+	if len(bb.commands) > 0 {
+		botCtx.Logger.Println("INFO: Creating commands...")
+		b.commands = bb.commands
 	} else {
-		b.commands = commandRegistry
-		botCtx.Logger.Println("INFO: Using default commands")
-	}
-
-	// Create events
-	if len(bb.customEvents) > 0 {
-		b.events = bb.customEvents
-		botCtx.Logger.Println("INFO: Using custom events")
-	} else {
-		b.events = eventRegistry
-		botCtx.Logger.Println("INFO: Using default events")
+		botCtx.Logger.Println("WARN: No commands provided, bot will start without any registered commands")
 	}
 
 	botCtx.Logger.Println("INFO: Bot instance successfully built")

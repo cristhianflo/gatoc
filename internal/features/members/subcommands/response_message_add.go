@@ -1,4 +1,4 @@
-package responsemessages
+package subcommands
 
 import (
 	"fmt"
@@ -9,7 +9,7 @@ import (
 	"github.com/bwmarrin/discordgo"
 )
 
-var Add bot.SlashSubcommand = bot.SlashSubcommand{
+var ResponseMessageAdd bot.SlashSubcommand = bot.SlashSubcommand{
 	Metadata: &discordgo.ApplicationCommandOption{
 		Type:        discordgo.ApplicationCommandOptionSubCommand,
 		Name:        "añadir",

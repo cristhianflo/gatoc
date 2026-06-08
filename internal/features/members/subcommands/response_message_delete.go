@@ -1,4 +1,4 @@
-package welcomeroles
+package subcommands
 
 import (
 	"fmt"
@@ -8,16 +8,16 @@ import (
 	"github.com/bwmarrin/discordgo"
 )
 
-var Delete bot.SlashSubcommand = bot.SlashSubcommand{
+var ResponseMessageDelete bot.SlashSubcommand = bot.SlashSubcommand{
 	Metadata: &discordgo.ApplicationCommandOption{
 		Type:        discordgo.ApplicationCommandOptionSubCommand,
 		Name:        "eliminar",
-		Description: "Elimina un rol de bienvenida",
+		Description: "Elimina una respuesta",
 		Options: []*discordgo.ApplicationCommandOption{
 			{
-				Type:        discordgo.ApplicationCommandOptionString, // This is the key!
+				Type:        discordgo.ApplicationCommandOptionString,
 				Name:        "id",
-				Description: "Rol a eliminar",
+				Description: "Respuesta a eliminar",
 				Required:    true,
 			},
 		},
@@ -36,27 +36,27 @@ var Delete bot.SlashSubcommand = bot.SlashSubcommand{
 		}
 
 		db := ctx.DB
-		var wRoleID string
+		var responseID string
 		var content string
-		if roleOption, ok := optionMap["id"]; ok {
-			wRoleID = roleOption.Value.(string)
+		if idOption, ok := optionMap["id"]; ok {
+			responseID = idOption.Value.(string)
 		} else {
-			content = "Ha ocurrido un error para obtener el rol."
+			content = "Ha ocurrido un error para obtener la respuesta."
 			bot.EditDeferred(s, i, content)
 			return fmt.Errorf("Error responding to interaction\n")
 		}
 
-		if result := db.Delete(&database.WelcomeRole{}, wRoleID); result.Error != nil {
-			content = "Ha ocurrido un error al eliminar el rol de bienvenida"
+		if result := db.Delete(&database.ResponseMessage{}, responseID); result.Error != nil {
+			content = "Ha ocurrido un error al eliminar el mensaje de respuesta"
 			bot.EditDeferred(s, i, content)
-			return fmt.Errorf("Error deleting welcome role: %s\n%v", wRoleID, result.Error)
+			return fmt.Errorf("Error deleting welcome role: %s\n%v", responseID, result.Error)
 		} else if result.RowsAffected < 1 {
-			content = "El ID introducido no existe en los roles de bienvenida"
+			content = "El ID introducido no existe en los mensajes de respuesta"
 			bot.EditDeferred(s, i, content)
 			return nil
 		}
 
-		content = fmt.Sprintf("El rol de ID `%s` ha sido eliminado de los roles de bienvenida", wRoleID)
+		content = fmt.Sprintf("El mensaje de ID `%s` ha sido eliminado de los mensajes de respuesta", responseID)
 		bot.EditDeferred(s, i, content)
 
 		return nil

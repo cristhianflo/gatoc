@@ -1,24 +1,27 @@
-package dolar
+package subcommands
 
 import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"strings"
-	"time"
 
 	"github.com/bachacode/gatoc/internal/bot"
 	"github.com/bwmarrin/discordgo"
 )
 
-var Paralelo bot.SlashSubcommand = bot.SlashSubcommand{
+type StatusResponse struct {
+	Status string `json:"estado"`
+	Random int    `json:"aleatorio"`
+}
+
+var DollarStatus bot.SlashSubcommand = bot.SlashSubcommand{
 	Metadata: &discordgo.ApplicationCommandOption{
 		Type:        discordgo.ApplicationCommandOptionSubCommand,
-		Name:        "paralelo",
-		Description: "Devuelve la cotización del Dólar Paralelo",
+		Name:        "estado",
+		Description: "Devuelve el estado de la API",
 	},
 	Handler: func(s *discordgo.Session, i *discordgo.InteractionCreate, ctx *bot.BotContext) error {
-		apiUrl := "https://ve.dolarapi.com/v1/dolares/paralelo"
+		apiUrl := "https://ve.dolarapi.com/v1/estado"
 
 		if err := bot.DeferReply(s, i); err != nil {
 			bot.GetInteractionFailedResponse(s, i, "")
@@ -32,7 +35,7 @@ var Paralelo bot.SlashSubcommand = bot.SlashSubcommand{
 		}
 		defer resp.Body.Close()
 
-		var response DolarResponse
+		var response StatusResponse
 		if err := json.NewDecoder(resp.Body).Decode(&response); err != nil {
 			bot.EditDeferred(s, i, "Error al decodificar la respuesta de la API.")
 			return err
@@ -43,27 +46,20 @@ var Paralelo bot.SlashSubcommand = bot.SlashSubcommand{
 			return fmt.Errorf("API returned non-200 status: %d", resp.StatusCode)
 		}
 
-		updatedAt, err := time.Parse(time.RFC3339, response.UpdatedAt)
-		average := strings.ReplaceAll(fmt.Sprintf("%.2f", response.Average), ".", ",")
-		if err != nil {
-			bot.GetInteractionFailedResponse(s, i, "Ha ocurrido un error interno.")
-			return err
-		}
-
 		embed := &discordgo.MessageEmbed{
-			Title:       "Cotización",
-			Description: "Cotización del Dólar Paralelo en Venezuela",
-			Color:       0x00ff00,
+			Title:       "Estado de la API del Dólar",
+			Description: "Información sobre el estado actual de la API del Dólar.",
+			Color:       0x00ff00, // Verde
 			Fields: []*discordgo.MessageEmbedField{
 				{
-					Name:   "Promedio",
-					Value:  fmt.Sprintf("```fix\nBs. %s\n```", average),
+					Name:   "Estado",
+					Value:  response.Status,
 					Inline: true,
 				},
 				{
-					Name:   "Última Actualización",
-					Value:  fmt.Sprintf("```fix\n%s\n```", updatedAt.Format("02/01/2006 03:04:05 PM")),
-					Inline: false,
+					Name:   "Código Aleatorio",
+					Value:  fmt.Sprintf("%d", response.Random),
+					Inline: true,
 				},
 			},
 		}

@@ -5,10 +5,14 @@ import (
 	"os"
 
 	"github.com/bachacode/gatoc/internal/bot"
-	_ "github.com/bachacode/gatoc/internal/commands"
 	"github.com/bachacode/gatoc/internal/config"
 	"github.com/bachacode/gatoc/internal/database"
-	_ "github.com/bachacode/gatoc/internal/events"
+	"github.com/bachacode/gatoc/internal/features/commander"
+	"github.com/bachacode/gatoc/internal/features/embedfixer"
+	"github.com/bachacode/gatoc/internal/features/finance"
+	"github.com/bachacode/gatoc/internal/features/members"
+	"github.com/bachacode/gatoc/internal/features/parrot"
+	"github.com/bachacode/gatoc/internal/features/ping"
 	"github.com/bwmarrin/discordgo"
 )
 
@@ -26,6 +30,15 @@ func main() {
 		logger.Fatalf("ERROR: Failed to migrate tables to db: %v\n", err)
 	}
 
+	features := []bot.Feature{
+		ping.NewFeature(),
+		members.NewFeature(),
+		finance.NewFeature(),
+		parrot.NewFeature(),
+		embedfixer.NewFeature(),
+		commander.NewFeature(),
+	}
+
 	bb := bot.NewBotBuilder(cfg.BotConfig)
 	bb.WithDatabase(db)
 	bb.WithIntents(
@@ -37,6 +50,7 @@ func main() {
 			discordgo.IntentsGuildMessageReactions,
 	)
 	bb.WithLogger(logger)
+	bb.WithFeatures(features)
 	bot, err := bb.Build()
 	if err != nil {
 		logger.Fatalf("ERROR: Failed to create bot instance: %v\n", err)

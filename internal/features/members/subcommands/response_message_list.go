@@ -1,4 +1,4 @@
-package responsemessages
+package subcommands
 
 import (
 	"fmt"
@@ -9,7 +9,7 @@ import (
 	"github.com/bwmarrin/discordgo"
 )
 
-var List bot.SlashSubcommand = bot.SlashSubcommand{
+var ResponseMessageList bot.SlashSubcommand = bot.SlashSubcommand{
 	Metadata: &discordgo.ApplicationCommandOption{
 		Type:        discordgo.ApplicationCommandOptionSubCommand,
 		Name:        "lista",

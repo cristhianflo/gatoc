@@ -1,4 +1,4 @@
-package welcomeroles
+package subcommands
 
 import (
 	"fmt"
@@ -9,7 +9,7 @@ import (
 	"github.com/bwmarrin/discordgo"
 )
 
-var List bot.SlashSubcommand = bot.SlashSubcommand{
+var WelcomeRoleList bot.SlashSubcommand = bot.SlashSubcommand{
 	Metadata: &discordgo.ApplicationCommandOption{
 		Type:        discordgo.ApplicationCommandOptionSubCommand,
 		Name:        "lista",

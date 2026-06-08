@@ -1,4 +1,4 @@
-package welcomeroles
+package subcommands
 
 import (
 	"errors"
@@ -10,7 +10,7 @@ import (
 	"gorm.io/gorm"
 )
 
-var Add bot.SlashSubcommand = bot.SlashSubcommand{
+var WelcomeRoleAdd bot.SlashSubcommand = bot.SlashSubcommand{
 	Metadata: &discordgo.ApplicationCommandOption{
 		Type:        discordgo.ApplicationCommandOptionSubCommand,
 		Name:        "añadir",

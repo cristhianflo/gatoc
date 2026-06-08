@@ -1,4 +1,4 @@
-package commands
+package fun
 
 import (
 	"fmt"
@@ -6,10 +6,6 @@ import (
 	"github.com/bachacode/gatoc/internal/bot"
 	"github.com/bwmarrin/discordgo"
 )
-
-func init() {
-	bot.RegisterCommand(ping.Metadata.Name, ping)
-}
 
 var ping bot.SlashCommand = bot.SlashCommand{
 	Metadata: &discordgo.ApplicationCommand{
