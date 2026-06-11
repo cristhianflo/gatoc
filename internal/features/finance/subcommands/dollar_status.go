@@ -19,16 +19,6 @@ var DollarStatus bot.SlashSubcommand = bot.SlashSubcommand{
 		Type:        discordgo.ApplicationCommandOptionSubCommand,
 		Name:        "status",
 		Description: "Returns the current status of the Dólar API in Venezuela",
-
-		NameLocalizations: map[discordgo.Locale]string{
-			discordgo.SpanishES:    "estado",
-			discordgo.SpanishLATAM: "estado",
-		},
-
-		DescriptionLocalizations: map[discordgo.Locale]string{
-			discordgo.SpanishES:    "Devuelve el estado actual de la API del Dólar en Venezuela",
-			discordgo.SpanishLATAM: "Devuelve el estado actual de la API del Dólar en Venezuela",
-		},
 	},
 	Handler: func(s *discordgo.Session, i *discordgo.InteractionCreate, ctx *bot.BotContext) error {
 		apiUrl := "https://ve.dolarapi.com/v1/estado"

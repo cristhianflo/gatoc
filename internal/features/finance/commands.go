@@ -14,16 +14,6 @@ func (f *FinanceFeature) dollarCommand() bot.SlashCommand {
 			Name:        "dollar",
 			Description: "Dollar to Bolivares exchange rates",
 
-			NameLocalizations: &map[discordgo.Locale]string{
-				discordgo.SpanishES:    "dolar",
-				discordgo.SpanishLATAM: "dolar",
-			},
-
-			DescriptionLocalizations: &map[discordgo.Locale]string{
-				discordgo.SpanishES:    "Tasas de cambio del Dólar a Bolívares",
-				discordgo.SpanishLATAM: "Tasas de cambio del Dólar a Bolívares",
-			},
-
 			Options: []*discordgo.ApplicationCommandOption{
 				subcommands.DollarAll.Metadata,
 				subcommands.DollarStatus.Metadata,
