@@ -15,8 +15,6 @@ var dollar bot.SlashCommand = bot.SlashCommand{
 		Options: []*discordgo.ApplicationCommandOption{
 			subcommands.DollarAll.Metadata,
 			subcommands.DollarStatus.Metadata,
-			subcommands.DollarBcv.Metadata,
-			subcommands.DollarParalelo.Metadata,
 		},
 	},
 	Handler: func(s *discordgo.Session, i *discordgo.InteractionCreate, ctx *bot.BotContext) error {
@@ -25,10 +23,6 @@ var dollar bot.SlashCommand = bot.SlashCommand{
 		switch options[0].Name {
 		case subcommands.DollarStatus.Metadata.Name:
 			return subcommands.DollarStatus.Handler(s, i, ctx)
-		case subcommands.DollarBcv.Metadata.Name:
-			return subcommands.DollarBcv.Handler(s, i, ctx)
-		case subcommands.DollarParalelo.Metadata.Name:
-			return subcommands.DollarParalelo.Handler(s, i, ctx)
 		case subcommands.DollarAll.Metadata.Name:
 			return subcommands.DollarAll.Handler(s, i, ctx)
 		default:
