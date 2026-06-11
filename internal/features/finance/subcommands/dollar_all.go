@@ -14,8 +14,18 @@ import (
 var DollarAll bot.SlashSubcommand = bot.SlashSubcommand{
 	Metadata: &discordgo.ApplicationCommandOption{
 		Type:        discordgo.ApplicationCommandOptionSubCommand,
-		Name:        "todos",
-		Description: "Devuelve todas las distintas cotizaciones del Dólar en Venezuela",
+		Name:        "all",
+		Description: "Returns all the different Dollar exchange rates in Venezuela",
+
+		NameLocalizations: map[discordgo.Locale]string{
+			discordgo.SpanishES:    "todos",
+			discordgo.SpanishLATAM: "todos",
+		},
+
+		DescriptionLocalizations: map[discordgo.Locale]string{
+			discordgo.SpanishES:    "Devuelve todas las distintas cotizaciones del Dólar en Venezuela",
+			discordgo.SpanishLATAM: "Devuelve todas las distintas cotizaciones del Dólar en Venezuela",
+		},
 	},
 	Handler: func(s *discordgo.Session, i *discordgo.InteractionCreate, ctx *bot.BotContext) error {
 		apiUrl := "https://ve.dolarapi.com/v1/dolares"

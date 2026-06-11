@@ -10,7 +10,7 @@ func NewFeature() *FinanceFeature {
 
 func (f *FinanceFeature) SlashCommands() []bot.SlashCommand {
 	return []bot.SlashCommand{
-		dollar,
+		f.dollarCommand(),
 	}
 }
 
