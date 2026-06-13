@@ -1,7 +1,6 @@
 package members
 
 import (
-	"errors"
 	"fmt"
 	"math/rand"
 	"strings"
@@ -9,7 +8,6 @@ import (
 	"github.com/bachacode/gatoc/internal/bot"
 	"github.com/bachacode/gatoc/internal/database"
 	"github.com/bwmarrin/discordgo"
-	"gorm.io/gorm"
 )
 
 func (f *MembersFeature) BotResponseHandler(s *discordgo.Session, m *discordgo.MessageCreate, ctx *bot.BotContext) error {
@@ -17,11 +15,7 @@ func (f *MembersFeature) BotResponseHandler(s *discordgo.Session, m *discordgo.M
 	db := ctx.DB
 
 	var response database.ResponseMessage
-	result := db.Where("message = ?", strings.ToLower(m.Content)).First(&response)
-
-	if errors.Is(result.Error, gorm.ErrRecordNotFound) {
-		return nil
-	}
+	result := db.Where("message = ?", strings.ToLower(m.Content)).Limit(1).Find(&response)
 
 	if result.Error != nil {
 		fmt.Printf("Failed to get response message: %v\n", result.Error)
