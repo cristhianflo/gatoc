@@ -19,8 +19,8 @@ CMD ["air", "-c", ".air.toml"]
 FROM base AS build
 
 RUN CGO_ENABLED=0 GOOS=linux go build -ldflags "-X 'github.com/bachacode/gatoc/internal/version.Version=Production' \
-    -X 'github.com/bachacode/gatoc/internal/version.BuildTime=$(date -u +"%d:%m:%Y %I:%M %p")'" \
-    -o bot ./cmd/bot/main.go
+  -X 'github.com/bachacode/gatoc/internal/version.BuildTime=$(date -u +"%d/%m/%Y %I:%M %p")'" \
+  -o bot ./cmd/bot/main.go
 
 # --- STAGE 4: Production Runtime (Minimal, only the compiled binary) ---
 FROM scratch as prod
