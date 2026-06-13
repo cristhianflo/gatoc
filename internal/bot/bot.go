@@ -163,8 +163,8 @@ func (b *bot) Run() error {
 	signal.Notify(sc, syscall.SIGINT, syscall.SIGTERM, os.Interrupt)
 	<-sc
 
-	b.Logger.Println("INFO: Unregistering commands...")
-	b.UnregisterCommands()
+	// b.Logger.Println("INFO: Unregistering commands...")
+	// b.UnregisterCommands()
 
 	b.Logger.Println("INFO: Closing bot session...")
 	b.session.Close()
