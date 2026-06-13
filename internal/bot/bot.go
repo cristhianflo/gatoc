@@ -51,7 +51,12 @@ func (b *bot) SetupEvents() {
 			return
 		}
 
-		cmd := b.commands[i.ApplicationCommandData().Name]
+		cmd, ok := b.commands[i.ApplicationCommandData().Name]
+		if !ok {
+			b.Logger.Printf("WARN: Received interaction for unknown command: %s", i.ApplicationCommandData().Name)
+			return
+		}
+
 		if err := cmd.Handler(s, i, b.BotContext); err != nil {
 			fmt.Printf("Failed to run interaction: %v\n", err)
 		}
@@ -158,8 +163,8 @@ func (b *bot) Run() error {
 	signal.Notify(sc, syscall.SIGINT, syscall.SIGTERM, os.Interrupt)
 	<-sc
 
-	// b.Logger.Println("INFO: Unregistering commands...")
-	// b.UnregisterCommands()
+	b.Logger.Println("INFO: Unregistering commands...")
+	b.UnregisterCommands()
 
 	b.Logger.Println("INFO: Closing bot session...")
 	b.session.Close()
