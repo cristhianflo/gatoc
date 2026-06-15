@@ -1,20 +1,24 @@
 package bot
 
 import (
+	"context"
 	"fmt"
 	"log"
 	"os"
 	"os/signal"
 	"syscall"
+	"time"
 
 	"github.com/bachacode/gatoc/internal/config"
 	"github.com/bwmarrin/discordgo"
+	"github.com/go-redis/redis/v8"
 	"gorm.io/gorm"
 )
 
 type BotContext struct {
 	*config.BotConfig
 	DB     *gorm.DB
+	Redis  *redis.Client
 	Logger *log.Logger
 }
 
@@ -34,6 +38,18 @@ func (b *bot) Setup() {
 	b.registerCommands()
 }
 
+func (b *bot) isDuplicateEvent(ctx context.Context, eventKey string) bool {
+	// Attempt to set the key with a 10-second TTL.
+	// NX means "Only set the key if it does not already exist."
+	success, err := b.Redis.SetNX(ctx, "event_lock:"+eventKey, "1", 10*time.Second).Result()
+	if err != nil {
+		b.Logger.Printf("WARN: Redis error: %v", err)
+		return false // Fail-safe: allow processing if Redis goes down
+	}
+	// If success is false, the key already existed -> it's a duplicate
+	return !success
+}
+
 func (b *bot) SetupEvents() {
 	// 1. Ready Event Dispatcher
 	b.session.AddHandlerOnce(func(s *discordgo.Session, r *discordgo.Ready) {
@@ -48,6 +64,10 @@ func (b *bot) SetupEvents() {
 	// 2. Core Interaction Create Dispatcher
 	b.session.AddHandler(func(s *discordgo.Session, i *discordgo.InteractionCreate) {
 		if i.Type != discordgo.InteractionApplicationCommand {
+			return
+		}
+
+		if b.isDuplicateEvent(context.Background(), "msg:"+i.ID) {
 			return
 		}
 
@@ -74,6 +94,10 @@ func (b *bot) SetupEvents() {
 			return
 		}
 
+		if b.isDuplicateEvent(context.Background(), "interaction:"+m.ID) {
+			return
+		}
+
 		for _, handler := range b.eventRouter.messageCreateHandlers {
 			if err := handler(s, m, b.BotContext); err != nil {
 				b.Logger.Printf("Middleware error on MessageCreate: %v", err)
@@ -83,6 +107,11 @@ func (b *bot) SetupEvents() {
 
 	// 4. Core Guild Member Add Dispatcher
 	b.session.AddHandler(func(s *discordgo.Session, m *discordgo.GuildMemberAdd) {
+		key := fmt.Sprintf("member_add:%s:%s", m.GuildID, m.User.ID)
+		if b.isDuplicateEvent(context.Background(), key) {
+			return
+		}
+
 		for _, handler := range b.eventRouter.guildMemberAddHandlers {
 			if err := handler(s, m, b.BotContext); err != nil {
 				b.Logger.Printf("Middleware error on GuildMemberAdd: %v", err)
@@ -92,6 +121,11 @@ func (b *bot) SetupEvents() {
 
 	// 5. Core Guild Member Remove Dispatcher
 	b.session.AddHandler(func(s *discordgo.Session, m *discordgo.GuildMemberRemove) {
+		key := fmt.Sprintf("member_remove:%s:%s", m.GuildID, m.User.ID)
+		if b.isDuplicateEvent(context.Background(), key) {
+			return
+		}
+
 		for _, handler := range b.eventRouter.guildMemberRemoveHandlers {
 			if err := handler(s, m, b.BotContext); err != nil {
 				b.Logger.Printf("Middleware error on GuildMemberRemove: %v", err)
@@ -101,6 +135,11 @@ func (b *bot) SetupEvents() {
 
 	// 6. Core Message Reaction Add Dispatcher
 	b.session.AddHandler(func(s *discordgo.Session, r *discordgo.MessageReactionAdd) {
+		key := fmt.Sprintf("reaction_add:%s:%s", r.GuildID, r.UserID)
+		if b.isDuplicateEvent(context.Background(), key) {
+			return
+		}
+
 		for _, handler := range b.eventRouter.messageReactionAddHandlers {
 			if err := handler(s, r, b.BotContext); err != nil {
 				b.Logger.Printf("Middleware error on MessageReactionAdd: %v", err)

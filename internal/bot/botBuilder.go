@@ -8,6 +8,7 @@ import (
 
 	"github.com/bachacode/gatoc/internal/config"
 	"github.com/bwmarrin/discordgo"
+	"github.com/go-redis/redis/v8"
 	"gorm.io/gorm"
 )
 
@@ -17,6 +18,7 @@ type BotBuilder struct {
 
 	// Optional dependencies/configurations
 	db          *gorm.DB
+	redis       *redis.Client
 	logger      *log.Logger
 	intents     discordgo.Intent
 	commands    map[string]SlashCommand
@@ -35,6 +37,11 @@ func NewBotBuilder(cfg *config.BotConfig) *BotBuilder {
 
 func (bb *BotBuilder) WithDatabase(db *gorm.DB) *BotBuilder {
 	bb.db = db
+	return bb
+}
+
+func (bb *BotBuilder) WithRedis(redis *redis.Client) *BotBuilder {
+	bb.redis = redis
 	return bb
 }
 
@@ -78,6 +85,7 @@ func (bb *BotBuilder) Build() (*bot, error) {
 	botCtx := &BotContext{
 		BotConfig: bb.cfg,
 		DB:        bb.db,
+		Redis:     bb.redis,
 		Logger:    bb.logger,
 	}
 

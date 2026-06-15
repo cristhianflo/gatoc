@@ -29,6 +29,12 @@ func main() {
 		logger.Fatalf("ERROR: Failed to migrate tables to db: %v\n", err)
 	}
 
+	redisClient, err := database.NewRedis(cfg.RedisConfig)
+	if err != nil {
+		logger.Fatalf("ERROR: Failed to connect to redis: %v\n", err)
+		return
+	}
+
 	features := []bot.Feature{
 		ping.NewFeature(),
 		members.NewFeature(),
@@ -39,6 +45,7 @@ func main() {
 
 	bb := bot.NewBotBuilder(cfg.BotConfig)
 	bb.WithDatabase(db)
+	bb.WithRedis(redisClient)
 	bb.WithIntents(
 		discordgo.IntentsGuilds |
 			discordgo.IntentsGuildVoiceStates |
