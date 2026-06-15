@@ -9,6 +9,7 @@ declare -A SECRETS=(
   ["guild-id"]="e74aa0bd-9668-4335-947b-b45b002fb545"
   ["main-channel-id"]="d19ad9ab-263d-40fd-b955-b45b002fd3b5"
   ["db-pass"]="8040da69-ecf3-4153-a6bd-b45b0033206a"
+  ["redis-url"]="a792e517-a324-4921-9db9-b46a0186d545"
 )
 
 echo "Locking down and Syncing Bitwarden Secrets to Docker Swarm..."

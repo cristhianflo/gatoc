@@ -9,6 +9,7 @@ services:
       - guild-id
       - main-channel-id
       - db-pass
+      - redis-url
     environment:
       TOKEN_FILE: /run/secrets/token
       CLIENT_ID_FILE: /run/secrets/client-id
@@ -20,6 +21,7 @@ services:
       DB_NAME: gatoc_bot
       DB_PORT: 5432
       DB_SSL: prefer
+      REDIS_URL_FILE: /run/secrets/redis-url
     deploy:
       update_config:
         order: start-first
