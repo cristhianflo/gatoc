@@ -8,6 +8,7 @@ import (
 type Config struct {
 	*BotConfig
 	*DbConfig
+	*RedisConfig
 }
 
 type BotConfig struct {
@@ -28,6 +29,10 @@ type DbConfig struct {
 	SslMode string
 }
 
+type RedisConfig struct {
+	Url string
+}
+
 func LoadConfig() *Config {
 	cfg := &Config{
 		BotConfig: &BotConfig{
@@ -45,6 +50,9 @@ func LoadConfig() *Config {
 			DbName:  getEnv("DB_NAME", "discordbot"),
 			DbPort:  getEnv("DB_PORT", "5432"),
 			SslMode: getEnv("DB_SSL", "disable"),
+		},
+		RedisConfig: &RedisConfig{
+			Url: getEnv("REDIS_URL", "redis://localhost:6379"),
 		},
 	}
 
