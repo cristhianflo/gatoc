@@ -1,5 +1,12 @@
 package subcommands
 
+type DollarSource string
+
+const (
+	OfficialDollarSource DollarSource = "oficial"
+	ParallelDollarSource DollarSource = "paralelo"
+)
+
 type DolarResponse struct {
 	Source    string  `json:"fuente"`
 	Name      string  `json:"nombre"`

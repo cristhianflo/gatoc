@@ -11,6 +11,7 @@ func NewFeature() *FinanceFeature {
 func (f *FinanceFeature) SlashCommands() []bot.SlashCommand {
 	return []bot.SlashCommand{
 		f.dollarCommand(),
+		f.convertCommand(),
 	}
 }
 
