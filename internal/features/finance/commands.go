@@ -42,6 +42,7 @@ func (f *FinanceFeature) convertCommand() bot.SlashCommand {
 			Description: "Dollar conversion from different rates",
 			Options: []*discordgo.ApplicationCommandOption{
 				subcommands.ConvertBcv.Metadata,
+				subcommands.ConvertParalelo.Metadata,
 			},
 		},
 		Handler: func(s *discordgo.Session, i *discordgo.InteractionCreate, ctx *bot.BotContext) error {
@@ -50,6 +51,8 @@ func (f *FinanceFeature) convertCommand() bot.SlashCommand {
 			switch options[0].Name {
 			case subcommands.ConvertBcv.Metadata.Name:
 				return subcommands.ConvertBcv.Handler(s, i, ctx)
+			case subcommands.ConvertParalelo.Metadata.Name:
+				return subcommands.ConvertParalelo.Handler(s, i, ctx)
 			default:
 				bot.GetInteractionFailedResponse(s, i, "El subcomando llamado no existe.")
 				return fmt.Errorf("Subcommand doesn't exist\n")
