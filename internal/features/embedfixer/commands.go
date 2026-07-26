@@ -23,6 +23,11 @@ var embedFixerConfigCommand = bot.SlashCommand{
 			},
 			{
 				Type:        discordgo.ApplicationCommandOptionSubCommand,
+				Name:        "nofix",
+				Description: "Explain how to bypass fixing with #nofix",
+			},
+			{
+				Type:        discordgo.ApplicationCommandOptionSubCommand,
 				Name:        "set",
 				Description: "Set custom domain for a supported platform",
 				Options: []*discordgo.ApplicationCommandOption{
@@ -66,6 +71,8 @@ var embedFixerConfigCommand = bot.SlashCommand{
 		switch subcommand.Name {
 		case "show":
 			return handleConfigShow(s, i, ctx)
+		case "nofix":
+			return handleNoFixInfo(s, i)
 		case "set":
 			return handleConfigSet(s, i, ctx, subcommand)
 		case "reset":

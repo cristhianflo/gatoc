@@ -11,6 +11,17 @@ import (
 	"github.com/bwmarrin/discordgo"
 )
 
+func hasNoFixTag(content string) bool {
+	parts := strings.Fields(strings.ToLower(content))
+	for _, part := range parts {
+		if part == "#nofix" {
+			return true
+		}
+	}
+
+	return false
+}
+
 func fixedURLFromDomain(rawURL string, replacementDomain string) (string, error) {
 	parsedURL, err := url.ParseRequestURI(rawURL)
 	if err != nil {
@@ -28,6 +39,10 @@ func buildFixedEmbedMessage(m *discordgo.MessageCreate, platform platformConfig,
 }
 
 func (f *EmbedFixerFeature) EmbedFixerHandler(s *discordgo.Session, m *discordgo.MessageCreate, ctx *bot.BotContext) error {
+	if hasNoFixTag(m.Content) {
+		return nil
+	}
+
 	re := regexp.MustCompile(`https?://[^\s]+`)
 
 	urlToParse := re.FindString(m.Content)

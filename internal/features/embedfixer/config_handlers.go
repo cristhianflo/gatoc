@@ -16,6 +16,21 @@ func modeDisplay(isCustom bool) string {
 	return "DEFAULT"
 }
 
+func handleNoFixInfo(s *discordgo.Session, i *discordgo.InteractionCreate) error {
+	if err := bot.DeferReply(s, i); err != nil {
+		bot.GetInteractionFailedResponse(s, i, "")
+		return err
+	}
+
+	content := strings.Join([]string{
+		"Para omitir el arreglador de embeds en un mensaje, agrega el tag `#nofix` en el contenido.",
+		"Ejemplo: `https://x.com/usuario/status/123 #nofix`",
+		"Con el tag presente, el bot no suprime el embed ni envía el mensaje fix.",
+	}, "\n")
+
+	return bot.EditDeferred(s, i, content)
+}
+
 func handleConfigShow(s *discordgo.Session, i *discordgo.InteractionCreate, ctx *bot.BotContext) error {
 	if err := bot.DeferReply(s, i); err != nil {
 		bot.GetInteractionFailedResponse(s, i, "")
