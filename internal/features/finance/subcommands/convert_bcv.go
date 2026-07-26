@@ -64,7 +64,7 @@ var ConvertBcv bot.SlashSubcommand = bot.SlashSubcommand{
 			return fmt.Errorf("API returned non-200 status: %d", resp.StatusCode)
 		}
 
-		var bcvRate, paraleloRate float32
+		var bcvRate, paraleloRate float64
 		for _, dolar := range response {
 			if dolar.Source == string(OfficialDollarSource) {
 				bcvRate = dolar.Average
@@ -79,8 +79,8 @@ var ConvertBcv bot.SlashSubcommand = bot.SlashSubcommand{
 			return nil
 		}
 
-		bolivares := float64(bcvRate) * amount
-		resultadoParalelo := bolivares / float64(paraleloRate)
+		bolivares := bcvRate * amount
+		resultadoParalelo := bolivares / paraleloRate
 
 		formatVez := func(f float64) string {
 			return strings.ReplaceAll(fmt.Sprintf("%.2f", f), ".", ",")
@@ -97,7 +97,7 @@ var ConvertBcv bot.SlashSubcommand = bot.SlashSubcommand{
 				},
 				{
 					Name:   "Tasa BCV",
-					Value:  fmt.Sprintf("```fix\nBs. %s\n```", formatVez(float64(bcvRate))),
+					Value:  fmt.Sprintf("```fix\nBs. %s\n```", formatVez(bcvRate)),
 					Inline: true,
 				},
 				{
@@ -107,7 +107,7 @@ var ConvertBcv bot.SlashSubcommand = bot.SlashSubcommand{
 				},
 				{
 					Name:   "Tasa Paralelo",
-					Value:  fmt.Sprintf("```fix\nBs. %s\n```", formatVez(float64(paraleloRate))),
+					Value:  fmt.Sprintf("```fix\nBs. %s\n```", formatVez(paraleloRate)),
 					Inline: true,
 				},
 				{
