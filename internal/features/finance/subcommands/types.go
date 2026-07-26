@@ -8,10 +8,11 @@ const (
 )
 
 type DolarResponse struct {
-	Source    string  `json:"fuente"`
-	Name      string  `json:"nombre"`
-	Buy       int     `json:"compra"`
-	Sell      int     `json:"venta"`
-	Average   float32 `json:"promedio"`
-	UpdatedAt string  `json:"fechaActualizacion"`
+	Currency  string   `json:"moneda"`
+	Source    string   `json:"fuente"`
+	Name      string   `json:"nombre"`
+	Buy       *float64 `json:"compra"`
+	Sell      *float64 `json:"venta"`
+	Average   float64  `json:"promedio"`
+	UpdatedAt string   `json:"fechaActualizacion"`
 }
