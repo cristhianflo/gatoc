@@ -8,40 +8,61 @@ import (
 	"github.com/bwmarrin/discordgo"
 )
 
+func modeDisplay(isCustom bool) string {
+	if isCustom {
+		return "CUSTOM"
+	}
+
+	return "DEFAULT"
+}
+
 func handleConfigShow(s *discordgo.Session, i *discordgo.InteractionCreate, ctx *bot.BotContext) error {
 	if err := bot.DeferReply(s, i); err != nil {
 		bot.GetInteractionFailedResponse(s, i, "")
 		return err
 	}
 
-	fields := make([]*discordgo.MessageEmbedField, 0, len(supportedPlatforms))
-	for _, platform := range supportedPlatforms {
+	fields := make([]*discordgo.MessageEmbedField, 0, len(supportedPlatforms)*4)
+	for index, platform := range supportedPlatforms {
 		domain, isCustom, err := resolveReplacementDomain(ctx.DB, i.GuildID, platform)
 		if err != nil {
 			bot.EditDeferred(s, i, "Failed to load embedfixer config")
 			return err
 		}
 
-		mode := "default"
-		if isCustom {
-			mode = "custom"
-		}
+		hosts := strings.Join(platform.SourceHosts, "\n")
+		mode := modeDisplay(isCustom)
 
-		fields = append(fields, &discordgo.MessageEmbedField{
-			Name: platform.DisplayName,
-			Value: fmt.Sprintf(
-				"Hosts: `%s`\nDomain: `%s`\nMode: `%s`",
-				strings.Join(platform.SourceHosts, "`, `"),
-				domain,
-				mode,
-			),
-			Inline: false,
-		})
+		fields = append(fields,
+			&discordgo.MessageEmbedField{
+				Name:   fmt.Sprintf("%s - Hosts", platform.DisplayName),
+				Value:  fmt.Sprintf("```fix\n%s\n```", hosts),
+				Inline: true,
+			},
+			&discordgo.MessageEmbedField{
+				Name:   fmt.Sprintf("%s - Domain", platform.DisplayName),
+				Value:  fmt.Sprintf("```fix\n%s\n```", domain),
+				Inline: true,
+			},
+			&discordgo.MessageEmbedField{
+				Name:   fmt.Sprintf("%s - Mode", platform.DisplayName),
+				Value:  fmt.Sprintf("```fix\n%s\n```", mode),
+				Inline: true,
+			},
+		)
+
+		if index < len(supportedPlatforms)-1 {
+			fields = append(fields, &discordgo.MessageEmbedField{
+				Name:   "\u200b",
+				Value:  "\u200b",
+				Inline: false,
+			})
+		}
 	}
 
 	embed := &discordgo.MessageEmbed{
 		Title:       "EmbedFixer Config",
-		Description: "Current replacement-domain configuration by supported platform.",
+		Description: "Estado de configuración por plataforma (tabla).",
 		Color:       0x00ff00,
 		Fields:      fields,
 	}
