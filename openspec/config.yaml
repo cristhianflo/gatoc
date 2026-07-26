@@ -1,0 +1,16 @@
+schema: spec-driven
+
+context: |
+  Tech stack: Go, DiscordGo, GORM, PostgreSQL
+  Architecture: Feature-based modules in internal/features, manual feature registration in cmd/bot/main.go
+  API conventions: Discord slash commands + event handlers
+  Testing: No automated test suite currently; testify available for new tests
+  Style: Idiomatic Go, gofmt formatting, clear feature boundaries
+
+rules:
+  proposal:
+    - Include rollback plan
+  specs:
+    - Use Given/When/Then format for scenarios
+  design:
+    - Include sequence diagrams for complex command/event flows, adapted to Discord interactions
