@@ -9,10 +9,12 @@ func NewFeature() *EmbedFixerFeature {
 }
 
 func (f *EmbedFixerFeature) SlashCommands() []bot.SlashCommand {
-	return nil
+	return []bot.SlashCommand{
+		embedFixerConfigCommand,
+	}
 }
 
-func (f *EmbedFixerFeature) Models() []interface{} {
+func (f *EmbedFixerFeature) Models() []any {
 	return nil
 }
 

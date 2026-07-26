@@ -23,6 +23,13 @@ type ResponseMessage struct {
 	UserID   *string
 }
 
+type EmbedFixerDomainOverride struct {
+	gorm.Model
+	GuildID      string `gorm:"not null;index:idx_embedfixer_guild_platform,unique"`
+	Platform     string `gorm:"not null;index:idx_embedfixer_guild_platform,unique"`
+	CustomDomain string `gorm:"not null"`
+}
+
 func New(cfg *config.DbConfig) (*gorm.DB, error) {
 	var err error
 	dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=%s", cfg.DbHost, cfg.DbUser, cfg.DbPass, cfg.DbName, cfg.DbPort, cfg.SslMode)
@@ -35,7 +42,7 @@ func New(cfg *config.DbConfig) (*gorm.DB, error) {
 }
 
 func Migrate(db *gorm.DB) error {
-	err := db.AutoMigrate(&WelcomeRole{}, &ResponseMessage{})
+	err := db.AutoMigrate(&WelcomeRole{}, &ResponseMessage{}, &EmbedFixerDomainOverride{})
 
 	if err != nil {
 		return err
