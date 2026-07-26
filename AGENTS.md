@@ -7,12 +7,16 @@ Discord bot in Go (`discordgo`) using GORM (Postgres).
 - **Feature-Based Module System:** Features are located in `internal/features/<name>`.
   - Each feature must implement the `bot.Feature` interface (`SlashCommands()`, `Models()`, `RegisterEvents()`).
   - **Manual Registration:** New features MUST be manually instantiated and added to the `features` slice in `cmd/bot/main.go`.
-- **Database Models & Migrations:** 
+- **Database Models & Migrations:**
   - Centralized in `internal/database/database.go`.
   - Migrations are handled via `gorm.AutoMigrate` in the `Migrate()` function. Add new models there.
 - **Slash Commands:** Defined using `bot.SlashCommand` struct.
   - Subcommands are grouped under a root command's `Options` and handled via a `switch` statement in the `Handler`.
 - **Event Handling:** Features register handlers via `router.On<Event>(handler)` in their `RegisterEvents` method.
+
+## Testing & Debugging
+
+- ALWAYS do `go build -o /dev/null ./...` after adding new code to catch compile-time errors.
 
 ## Development Workflow
 
