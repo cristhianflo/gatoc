@@ -37,8 +37,8 @@ var ping bot.SlashCommand = bot.SlashCommand{
 				},
 			},
 			Footer: &discordgo.MessageEmbedFooter{
-			Text: "Hecho con 💙 y 🐱",
-		},
+				Text: "Hecho con 💙 y 🐱",
+			},
 		}
 		err := s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
 			Type: discordgo.InteractionResponseChannelMessageWithSource,
