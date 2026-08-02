@@ -13,5 +13,5 @@ var (
 
 // Info returns a formatted string containing full build details.
 func Info() string {
-	return fmt.Sprintf("v%s (%s) built on %s using %s", Version, BuildTime, runtime.Version())
+	return fmt.Sprintf("v%s (%s) built on %s", Version, BuildTime, runtime.Version())
 }
