@@ -1,6 +1,6 @@
 ## Purpose
 
-Define expected behavior for reporting multi-currency (USD and EUR) exchange-rate data in the finance command output, including resilience and transparency requirements.
+Define expected behavior for reporting multi-currency (USD and EUR) exchange-rate data in the finance command output, including resilience and transparency requirements. This is the living specification for the finance feature module.
 
 ## Requirements
 
