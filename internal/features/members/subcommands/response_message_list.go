@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/bachacode/gatoc/internal/bot"
-	"github.com/bachacode/gatoc/internal/database"
+	"github.com/bachacode/gatoc/internal/features/members/model"
 	"github.com/bwmarrin/discordgo"
 )
 
@@ -25,7 +25,7 @@ var ResponseMessageList bot.SlashSubcommand = bot.SlashSubcommand{
 		db := ctx.DB
 		content := ""
 
-		var responses []database.ResponseMessage
+		var responses []model.ResponseMessage
 		result := db.Find(&responses)
 
 		if result.Error != nil {

@@ -5,7 +5,6 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/bachacode/gatoc/internal/database"
 	"gorm.io/gorm"
 )
 
@@ -45,7 +44,7 @@ func getCustomDomain(db *gorm.DB, guildID string, platformKey string) (string, b
 		return "", false, nil
 	}
 
-	var override database.EmbedFixerDomainOverride
+	var override EmbedFixerDomainOverride
 	err := db.Where("guild_id = ? AND platform = ?", guildID, platformKey).First(&override).Error
 	if err == nil {
 		return override.CustomDomain, true, nil
@@ -63,14 +62,14 @@ func setCustomDomain(db *gorm.DB, guildID string, platformKey string, customDoma
 		return fmt.Errorf("database is not configured")
 	}
 
-	override := database.EmbedFixerDomainOverride{
+	override := EmbedFixerDomainOverride{
 		GuildID:      guildID,
 		Platform:     platformKey,
 		CustomDomain: customDomain,
 	}
 
 	return db.Where("guild_id = ? AND platform = ?", guildID, platformKey).
-		Assign(database.EmbedFixerDomainOverride{CustomDomain: customDomain}).
+		Assign(EmbedFixerDomainOverride{CustomDomain: customDomain}).
 		FirstOrCreate(&override).Error
 }
 
@@ -79,7 +78,7 @@ func resetCustomDomain(db *gorm.DB, guildID string, platformKey string) error {
 		return fmt.Errorf("database is not configured")
 	}
 
-	return db.Where("guild_id = ? AND platform = ?", guildID, platformKey).Delete(&database.EmbedFixerDomainOverride{}).Error
+	return db.Where("guild_id = ? AND platform = ?", guildID, platformKey).Delete(&EmbedFixerDomainOverride{}).Error
 }
 
 func activeDomain(platform platformConfig, customDomain string, isCustom bool) (string, bool) {

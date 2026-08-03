@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/bachacode/gatoc/internal/bot"
-	"github.com/bachacode/gatoc/internal/database"
+	"github.com/bachacode/gatoc/internal/features/members/model"
 	"github.com/bwmarrin/discordgo"
 )
 
@@ -25,7 +25,7 @@ var WelcomeRoleList bot.SlashSubcommand = bot.SlashSubcommand{
 		db := ctx.DB
 		content := ""
 
-		var wRoles []database.WelcomeRole
+		var wRoles []model.WelcomeRole
 		result := db.Find(&wRoles)
 
 		if result.Error != nil {

@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"github.com/bachacode/gatoc/internal/bot"
-	"github.com/bachacode/gatoc/internal/database"
+	"github.com/bachacode/gatoc/internal/features/members/model"
 	"github.com/bwmarrin/discordgo"
 )
 
@@ -81,7 +81,7 @@ var ResponseMessageAdd bot.SlashSubcommand = bot.SlashSubcommand{
 			return fmt.Errorf("Error responding to interaction\n")
 		}
 
-		response := database.ResponseMessage{
+		response := model.ResponseMessage{
 			GuildID:  guildID,
 			Message:  strings.ToLower(message),
 			Response: responseMsg,

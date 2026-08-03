@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/bachacode/gatoc/internal/bot"
-	"github.com/bachacode/gatoc/internal/database"
+	"github.com/bachacode/gatoc/internal/features/members/model"
 	"github.com/bwmarrin/discordgo"
 )
 
@@ -14,7 +14,7 @@ func (f *MembersFeature) BotResponseHandler(s *discordgo.Session, m *discordgo.M
 
 	db := ctx.DB
 
-	var response database.ResponseMessage
+	var response model.ResponseMessage
 	result := db.Where("message = ?", strings.ToLower(m.Content)).Limit(1).Find(&response)
 
 	if result.Error != nil {
@@ -120,7 +120,7 @@ func (f *MembersFeature) GuildMemberRemoveMessageHandler(s *discordgo.Session, r
 
 func (f *MembersFeature) GuildMemberAddRoleHandler(s *discordgo.Session, r *discordgo.GuildMemberAdd, ctx *bot.BotContext) error {
 	db := ctx.DB
-	var wRoles []database.WelcomeRole
+	var wRoles []model.WelcomeRole
 	result := db.Find(&wRoles)
 
 	if result.Error != nil {

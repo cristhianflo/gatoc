@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/bachacode/gatoc/internal/bot"
-	"github.com/bachacode/gatoc/internal/database"
+	"github.com/bachacode/gatoc/internal/features/members/model"
 	"github.com/bwmarrin/discordgo"
 )
 
@@ -46,7 +46,7 @@ var WelcomeRoleDelete bot.SlashSubcommand = bot.SlashSubcommand{
 			return fmt.Errorf("Error responding to interaction\n")
 		}
 
-		if result := db.Delete(&database.WelcomeRole{}, wRoleID); result.Error != nil {
+		if result := db.Delete(&model.WelcomeRole{}, wRoleID); result.Error != nil {
 			content = "Ha ocurrido un error al eliminar el rol de bienvenida"
 			bot.EditDeferred(s, i, content)
 			return fmt.Errorf("Error deleting welcome role: %s\n%v", wRoleID, result.Error)

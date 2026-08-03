@@ -25,7 +25,20 @@ func main() {
 		return
 	}
 
-	if err := database.Migrate(db); err != nil {
+	features := []bot.Feature{
+		ping.NewFeature(),
+		members.NewFeature(),
+		finance.NewFeature(),
+		parrot.NewFeature(),
+		embedfixer.NewFeature(),
+	}
+
+	var models []interface{}
+	for _, f := range features {
+		models = append(models, f.Models()...)
+	}
+
+	if err := database.Migrate(db, models...); err != nil {
 		logger.Fatalf("ERROR: Failed to migrate tables to db: %v\n", err)
 	}
 
@@ -33,14 +46,6 @@ func main() {
 	if err != nil {
 		logger.Fatalf("ERROR: Failed to connect to redis: %v\n", err)
 		return
-	}
-
-	features := []bot.Feature{
-		ping.NewFeature(),
-		members.NewFeature(),
-		finance.NewFeature(),
-		parrot.NewFeature(),
-		embedfixer.NewFeature(),
 	}
 
 	bb := bot.NewBotBuilder(cfg.BotConfig)

@@ -15,7 +15,7 @@ func (f *EmbedFixerFeature) SlashCommands() []bot.SlashCommand {
 }
 
 func (f *EmbedFixerFeature) Models() []any {
-	return nil
+	return []any{&EmbedFixerDomainOverride{}}
 }
 
 func (f *EmbedFixerFeature) RegisterEvents(router *bot.EventRouter) {

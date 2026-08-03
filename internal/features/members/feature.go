@@ -1,6 +1,9 @@
 package members
 
-import "github.com/bachacode/gatoc/internal/bot"
+import (
+	"github.com/bachacode/gatoc/internal/bot"
+	"github.com/bachacode/gatoc/internal/features/members/model"
+)
 
 type MembersFeature struct{}
 
@@ -16,7 +19,7 @@ func (f *MembersFeature) SlashCommands() []bot.SlashCommand {
 }
 
 func (f *MembersFeature) Models() []interface{} {
-	return nil
+	return []interface{}{&model.WelcomeRole{}, &model.ResponseMessage{}}
 }
 
 func (f *MembersFeature) RegisterEvents(router *bot.EventRouter) {

@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	"github.com/bachacode/gatoc/internal/bot"
-	"github.com/bachacode/gatoc/internal/database"
+	"github.com/bachacode/gatoc/internal/features/members/model"
 	"github.com/bwmarrin/discordgo"
 	"gorm.io/gorm"
 )
@@ -67,7 +67,7 @@ var WelcomeRoleAdd bot.SlashSubcommand = bot.SlashSubcommand{
 			}
 		}
 
-		welcomeRole := database.WelcomeRole{
+		welcomeRole := model.WelcomeRole{
 			GuildID: guildID,
 			RoleID:  selectedRole.ID,
 		}
