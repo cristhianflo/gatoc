@@ -16,7 +16,14 @@ Discord bot in Go (`discordgo`) using GORM (Postgres).
 
 ## Testing & Debugging
 
-- ALWAYS do `go build -o /dev/null ./...` after adding new code to catch compile-time errors.
+After ANY code change, ALL of the following MUST pass before considering the work done:
+
+1. **Compile:** `go build -o /dev/null ./...`
+2. **Vet:** `go vet ./...`
+3. **Format:** `gofmt -l .` must output nothing. Run `gofmt -w .` if it lists files.
+4. **Tests:** `go test ./...`
+
+Do NOT claim a task is complete without running the checks above and confirming they pass.
 
 ## Development Workflow
 
@@ -24,7 +31,7 @@ Discord bot in Go (`discordgo`) using GORM (Postgres).
   1. `cp .env.example .env` and fill `TOKEN`, `CLIENT_ID`, `GUILD_ID`.
   2. `docker-compose up` (uses `air` for hot-reloading).
 - **Environment:** The bot runs in a containerized environment; ensure `.env` is correctly mapped.
-- **Testing:** No automated tests currently. `github.com/stretchr/testify` is available if needed.
+- **Testing:** Tests live next to the code they cover (`*_test.go`). Use `github.com/stretchr/testify` for assertions.
 
 ## Entrypoints & Infrastructure
 
