@@ -56,6 +56,7 @@
       "_origin": "ast",
       "id": "opencode_opencode",
       "community": 18,
+      "community_name": "opencode.json",
       "norm_label": "opencode.json"
     },
     {
@@ -66,6 +67,7 @@
       "_origin": "ast",
       "id": "opencode_opencode_schema",
       "community": 18,
+      "community_name": "opencode.json",
       "norm_label": "$schema"
     },
     {
@@ -76,6 +78,7 @@
       "_origin": "ast",
       "id": "opencode_opencode_plugin",
       "community": 18,
+      "community_name": "opencode.json",
       "norm_label": "plugin"
     },
     {
@@ -86,6 +89,7 @@
       "_origin": "ast",
       "id": "ref_opencode_plugins_graphify_js",
       "community": 18,
+      "community_name": "opencode.json",
       "norm_label": ".opencode/plugins/graphify.js"
     },
     {
@@ -96,6 +100,7 @@
       "_origin": "ast",
       "id": "opencode_plugins_graphify",
       "community": 27,
+      "community_name": "graphify.js",
       "norm_label": "graphify.js"
     },
     {
@@ -106,6 +111,7 @@
       "_origin": "ast",
       "id": "opencode_plugins_graphify_graphifyplugin",
       "community": 27,
+      "community_name": "graphify.js",
       "norm_label": "graphifyplugin()"
     },
     {
@@ -116,6 +122,7 @@
       "_origin": "ast",
       "id": "opencode_plugins_graphify_rationale_4",
       "community": 27,
+      "community_name": "graphify.js",
       "norm_label": "important: keep the reminder string free of backticks and $(...) constructs."
     },
     {
@@ -126,6 +133,7 @@
       "_origin": "ast",
       "id": "assets_embed",
       "community": 30,
+      "community_name": "embed.go",
       "norm_label": "embed.go"
     },
     {
@@ -136,6 +144,7 @@
       "_origin": "ast",
       "id": "assets_embed_getcatgif",
       "community": 30,
+      "community_name": "embed.go",
       "norm_label": "getcatgif()"
     },
     {
@@ -146,6 +155,7 @@
       "_origin": "ast",
       "id": "cmd_bot_main",
       "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "main.go"
     },
     {
@@ -156,6 +166,7 @@
       "_origin": "ast",
       "id": "cmd_bot_main_main",
       "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "main()"
     },
     {
@@ -170,6 +181,7 @@
       "_origin": "ast",
       "id": "deploy_secrets",
       "community": 23,
+      "community_name": "deploy-secrets.sh",
       "norm_label": "deploy-secrets.sh"
     },
     {
@@ -184,6 +196,7 @@
       "_origin": "ast",
       "id": "deploy_secrets_sh__entry",
       "community": 23,
+      "community_name": "deploy-secrets.sh",
       "norm_label": "deploy-secrets.sh script"
     },
     {
@@ -198,6 +211,7 @@
       "_origin": "ast",
       "id": "deploy_secrets_secrets",
       "community": 23,
+      "community_name": "deploy-secrets.sh",
       "norm_label": "secrets"
     },
     {
@@ -212,6 +226,7 @@
       "_origin": "ast",
       "id": "deploy",
       "community": 31,
+      "community_name": "deploy.sh",
       "norm_label": "deploy.sh"
     },
     {
@@ -226,6 +241,7 @@
       "_origin": "ast",
       "id": "deploy_sh__entry",
       "community": 31,
+      "community_name": "deploy.sh",
       "norm_label": "deploy.sh script"
     },
     {
@@ -238,6 +254,7 @@
       "_origin": "ast",
       "id": "pkg_github_com_bachacode_gatoc",
       "community": 51,
+      "community_name": "github.com/bachacode/gatoc",
       "norm_label": "github.com/bachacode/gatoc"
     },
     {
@@ -247,7 +264,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "internal_bot_bot",
-      "community": 3,
+      "community": 7,
+      "community_name": "bot",
       "norm_label": "bot.go"
     },
     {
@@ -258,6 +276,7 @@
       "_origin": "ast",
       "id": "bot_botcontext",
       "community": 3,
+      "community_name": "BotContext",
       "norm_label": "botcontext"
     },
     {
@@ -268,6 +287,7 @@
       "_origin": "ast",
       "id": "internal_bot_bot_go_db",
       "community": 3,
+      "community_name": "BotContext",
       "norm_label": "db"
     },
     {
@@ -278,6 +298,7 @@
       "_origin": "ast",
       "id": "internal_bot_bot_go_client",
       "community": 3,
+      "community_name": "BotContext",
       "norm_label": "client"
     },
     {
@@ -288,6 +309,7 @@
       "_origin": "ast",
       "id": "internal_bot_bot_go_logger",
       "community": 3,
+      "community_name": "BotContext",
       "norm_label": "logger"
     },
     {
@@ -297,7 +319,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "bot_bot",
-      "community": 0,
+      "community": 7,
+      "community_name": "bot",
       "norm_label": "bot"
     },
     {
@@ -307,7 +330,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "internal_bot_bot_go_session",
-      "community": 0,
+      "community": 7,
+      "community_name": "bot",
       "norm_label": "session"
     },
     {
@@ -317,7 +341,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "internal_bot_bot_go_intent",
-      "community": 0,
+      "community": 7,
+      "community_name": "bot",
       "norm_label": "intent"
     },
     {
@@ -327,7 +352,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "bot_bot_setup",
-      "community": 0,
+      "community": 7,
+      "community_name": "bot",
       "norm_label": ".setup()"
     },
     {
@@ -337,7 +363,8 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "bot_bot_isduplicateevent",
-      "community": 0,
+      "community": 7,
+      "community_name": "bot",
       "norm_label": ".isduplicateevent()"
     },
     {
@@ -347,7 +374,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "context",
-      "community": 0,
+      "community": 7,
+      "community_name": "bot",
       "norm_label": "context"
     },
     {
@@ -357,7 +385,8 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "bot_bot_setupevents",
-      "community": 0,
+      "community": 7,
+      "community_name": "bot",
       "norm_label": ".setupevents()"
     },
     {
@@ -367,7 +396,8 @@
       "source_location": "L151",
       "_origin": "ast",
       "id": "bot_bot_registercommands",
-      "community": 0,
+      "community": 7,
+      "community_name": "bot",
       "norm_label": ".registercommands()"
     },
     {
@@ -377,7 +407,8 @@
       "source_location": "L167",
       "_origin": "ast",
       "id": "bot_bot_unregistercommands",
-      "community": 0,
+      "community": 7,
+      "community_name": "bot",
       "norm_label": ".unregistercommands()"
     },
     {
@@ -388,6 +419,7 @@
       "_origin": "ast",
       "id": "bot_bot_run",
       "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": ".run()"
     },
     {
@@ -397,7 +429,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "internal_bot_botbuilder",
-      "community": 7,
+      "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "botbuilder.go"
     },
     {
@@ -407,7 +440,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "bot_botbuilder",
-      "community": 7,
+      "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "botbuilder"
     },
     {
@@ -417,7 +451,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "internal_bot_botbuilder_go_db",
-      "community": 7,
+      "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "db"
     },
     {
@@ -427,7 +462,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "internal_bot_botbuilder_go_client",
-      "community": 7,
+      "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "client"
     },
     {
@@ -437,7 +473,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "internal_bot_botbuilder_go_logger",
-      "community": 7,
+      "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "logger"
     },
     {
@@ -447,7 +484,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "internal_bot_botbuilder_go_intent",
-      "community": 7,
+      "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "intent"
     },
     {
@@ -457,7 +495,8 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "internal_bot_botbuilder_newbotbuilder",
-      "community": 7,
+      "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "newbotbuilder()"
     },
     {
@@ -467,7 +506,8 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "bot_botbuilder_withdatabase",
-      "community": 7,
+      "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": ".withdatabase()"
     },
     {
@@ -477,7 +517,8 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "bot_botbuilder_withredis",
-      "community": 7,
+      "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": ".withredis()"
     },
     {
@@ -487,7 +528,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "bot_botbuilder_withlogger",
-      "community": 7,
+      "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": ".withlogger()"
     },
     {
@@ -497,7 +539,8 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "bot_botbuilder_withintents",
-      "community": 7,
+      "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": ".withintents()"
     },
     {
@@ -507,7 +550,8 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "bot_botbuilder_withfeatures",
-      "community": 7,
+      "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": ".withfeatures()"
     },
     {
@@ -518,6 +562,7 @@
       "_origin": "ast",
       "id": "bot_botbuilder_build",
       "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": ".build()"
     },
     {
@@ -528,6 +573,7 @@
       "_origin": "ast",
       "id": "internal_bot_commands",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": "bot/commands.go"
     },
     {
@@ -538,6 +584,7 @@
       "_origin": "ast",
       "id": "bot_slashcommand",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": "slashcommand"
     },
     {
@@ -548,6 +595,7 @@
       "_origin": "ast",
       "id": "applicationcommand",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": "applicationcommand"
     },
     {
@@ -558,6 +606,7 @@
       "_origin": "ast",
       "id": "internal_bot_commands_go_session",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": "session"
     },
     {
@@ -568,6 +617,7 @@
       "_origin": "ast",
       "id": "internal_bot_commands_go_interactioncreate",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": "interactioncreate"
     },
     {
@@ -578,6 +628,7 @@
       "_origin": "ast",
       "id": "bot_slashsubcommand",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": "slashsubcommand"
     },
     {
@@ -588,6 +639,7 @@
       "_origin": "ast",
       "id": "applicationcommandoption",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": "applicationcommandoption"
     },
     {
@@ -598,6 +650,7 @@
       "_origin": "ast",
       "id": "internal_bot_commands_getinteractionfailedresponse",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": "getinteractionfailedresponse()"
     },
     {
@@ -608,6 +661,7 @@
       "_origin": "ast",
       "id": "internal_bot_commands_deferreply",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": "deferreply()"
     },
     {
@@ -618,6 +672,7 @@
       "_origin": "ast",
       "id": "internal_bot_commands_editdeferred",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": "editdeferred()"
     },
     {
@@ -628,6 +683,7 @@
       "_origin": "ast",
       "id": "internal_bot_commands_getinteractionoptionstring",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": "getinteractionoptionstring()"
     },
     {
@@ -637,7 +693,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "internal_bot_feature",
-      "community": 7,
+      "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "bot/feature.go"
     },
     {
@@ -647,7 +704,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "bot_feature",
-      "community": 7,
+      "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "feature"
     },
     {
@@ -658,6 +716,7 @@
       "_origin": "ast",
       "id": "internal_bot_router",
       "community": 2,
+      "community_name": "EventRouter",
       "norm_label": "router.go"
     },
     {
@@ -668,6 +727,7 @@
       "_origin": "ast",
       "id": "bot_messagecreatemiddleware",
       "community": 2,
+      "community_name": "EventRouter",
       "norm_label": "messagecreatemiddleware"
     },
     {
@@ -678,6 +738,7 @@
       "_origin": "ast",
       "id": "bot_guildmemberaddmiddleware",
       "community": 2,
+      "community_name": "EventRouter",
       "norm_label": "guildmemberaddmiddleware"
     },
     {
@@ -688,6 +749,7 @@
       "_origin": "ast",
       "id": "bot_guildmemberremovemiddleware",
       "community": 2,
+      "community_name": "EventRouter",
       "norm_label": "guildmemberremovemiddleware"
     },
     {
@@ -698,6 +760,7 @@
       "_origin": "ast",
       "id": "bot_readymiddleware",
       "community": 2,
+      "community_name": "EventRouter",
       "norm_label": "readymiddleware"
     },
     {
@@ -708,6 +771,7 @@
       "_origin": "ast",
       "id": "bot_interactioncreatemiddleware",
       "community": 2,
+      "community_name": "EventRouter",
       "norm_label": "interactioncreatemiddleware"
     },
     {
@@ -718,6 +782,7 @@
       "_origin": "ast",
       "id": "bot_messagereactionaddmiddleware",
       "community": 2,
+      "community_name": "EventRouter",
       "norm_label": "messagereactionaddmiddleware"
     },
     {
@@ -728,6 +793,7 @@
       "_origin": "ast",
       "id": "bot_eventrouter",
       "community": 2,
+      "community_name": "EventRouter",
       "norm_label": "eventrouter"
     },
     {
@@ -738,6 +804,7 @@
       "_origin": "ast",
       "id": "internal_bot_router_neweventrouter",
       "community": 2,
+      "community_name": "EventRouter",
       "norm_label": "neweventrouter()"
     },
     {
@@ -748,6 +815,7 @@
       "_origin": "ast",
       "id": "bot_eventrouter_onmessagecreate",
       "community": 2,
+      "community_name": "EventRouter",
       "norm_label": ".onmessagecreate()"
     },
     {
@@ -758,6 +826,7 @@
       "_origin": "ast",
       "id": "bot_eventrouter_onguildmemberadd",
       "community": 2,
+      "community_name": "EventRouter",
       "norm_label": ".onguildmemberadd()"
     },
     {
@@ -768,6 +837,7 @@
       "_origin": "ast",
       "id": "bot_eventrouter_onguildmemberremove",
       "community": 2,
+      "community_name": "EventRouter",
       "norm_label": ".onguildmemberremove()"
     },
     {
@@ -778,6 +848,7 @@
       "_origin": "ast",
       "id": "bot_eventrouter_onready",
       "community": 2,
+      "community_name": "EventRouter",
       "norm_label": ".onready()"
     },
     {
@@ -788,6 +859,7 @@
       "_origin": "ast",
       "id": "bot_eventrouter_oninteractioncreate",
       "community": 2,
+      "community_name": "EventRouter",
       "norm_label": ".oninteractioncreate()"
     },
     {
@@ -798,6 +870,7 @@
       "_origin": "ast",
       "id": "bot_eventrouter_onmessagereactionadd",
       "community": 2,
+      "community_name": "EventRouter",
       "norm_label": ".onmessagereactionadd()"
     },
     {
@@ -808,6 +881,7 @@
       "_origin": "ast",
       "id": "internal_config_config",
       "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "config.go"
     },
     {
@@ -818,6 +892,7 @@
       "_origin": "ast",
       "id": "config_config",
       "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "config"
     },
     {
@@ -828,6 +903,7 @@
       "_origin": "ast",
       "id": "config_botconfig",
       "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "botconfig"
     },
     {
@@ -838,6 +914,7 @@
       "_origin": "ast",
       "id": "config_dbconfig",
       "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "dbconfig"
     },
     {
@@ -848,6 +925,7 @@
       "_origin": "ast",
       "id": "config_redisconfig",
       "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "redisconfig"
     },
     {
@@ -858,6 +936,7 @@
       "_origin": "ast",
       "id": "internal_config_config_loadconfig",
       "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "loadconfig()"
     },
     {
@@ -868,6 +947,7 @@
       "_origin": "ast",
       "id": "internal_config_config_getenv",
       "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "getenv()"
     },
     {
@@ -878,6 +958,7 @@
       "_origin": "ast",
       "id": "internal_database_database",
       "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "database.go"
     },
     {
@@ -888,6 +969,7 @@
       "_origin": "ast",
       "id": "internal_database_database_new",
       "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "new()"
     },
     {
@@ -898,6 +980,7 @@
       "_origin": "ast",
       "id": "internal_database_database_go_db",
       "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "db"
     },
     {
@@ -908,6 +991,7 @@
       "_origin": "ast",
       "id": "internal_database_database_migrate",
       "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "migrate()"
     },
     {
@@ -918,6 +1002,7 @@
       "_origin": "ast",
       "id": "internal_database_redis",
       "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "redis.go"
     },
     {
@@ -928,6 +1013,7 @@
       "_origin": "ast",
       "id": "internal_database_redis_newredis",
       "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "newredis()"
     },
     {
@@ -938,6 +1024,7 @@
       "_origin": "ast",
       "id": "internal_database_redis_go_client",
       "community": 0,
+      "community_name": "BotBuilder",
       "norm_label": "client"
     },
     {
@@ -948,6 +1035,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_commands",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": "embedfixer/commands.go"
     },
     {
@@ -958,6 +1046,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_commands_buildplatformchoices",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": "buildplatformchoices()"
     },
     {
@@ -968,6 +1057,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_config_handlers",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": "config_handlers.go"
     },
     {
@@ -978,6 +1068,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_config_handlers_modedisplay",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": "modedisplay()"
     },
     {
@@ -988,6 +1079,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_config_handlers_handlenofixinfo",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": "handlenofixinfo()"
     },
     {
@@ -998,6 +1090,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_config_handlers_go_session",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": "session"
     },
     {
@@ -1008,6 +1101,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_config_handlers_go_interactioncreate",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": "interactioncreate"
     },
     {
@@ -1018,6 +1112,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_config_handlers_handleconfigshow",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": "handleconfigshow()"
     },
     {
@@ -1028,6 +1123,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_config_handlers_handleconfigset",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": "handleconfigset()"
     },
     {
@@ -1038,6 +1134,7 @@
       "_origin": "ast",
       "id": "applicationcommandinteractiondataoption",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": "applicationcommandinteractiondataoption"
     },
     {
@@ -1048,6 +1145,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_config_handlers_handleconfigreset",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": "handleconfigreset()"
     },
     {
@@ -1058,6 +1156,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_config_service",
       "community": 4,
+      "community_name": "resolveReplacementDomain",
       "norm_label": "config_service.go"
     },
     {
@@ -1068,6 +1167,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_config_service_normalizedomainhost",
       "community": 4,
+      "community_name": "resolveReplacementDomain",
       "norm_label": "normalizedomainhost()"
     },
     {
@@ -1078,6 +1178,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_config_service_getcustomdomain",
       "community": 4,
+      "community_name": "resolveReplacementDomain",
       "norm_label": "getcustomdomain()"
     },
     {
@@ -1088,6 +1189,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_config_service_go_db",
       "community": 4,
+      "community_name": "resolveReplacementDomain",
       "norm_label": "db"
     },
     {
@@ -1098,6 +1200,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_config_service_setcustomdomain",
       "community": 4,
+      "community_name": "resolveReplacementDomain",
       "norm_label": "setcustomdomain()"
     },
     {
@@ -1108,6 +1211,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_config_service_resetcustomdomain",
       "community": 4,
+      "community_name": "resolveReplacementDomain",
       "norm_label": "resetcustomdomain()"
     },
     {
@@ -1118,6 +1222,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_config_service_activedomain",
       "community": 4,
+      "community_name": "resolveReplacementDomain",
       "norm_label": "activedomain()"
     },
     {
@@ -1128,6 +1233,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_config_service_resolvereplacementdomain",
       "community": 4,
+      "community_name": "resolveReplacementDomain",
       "norm_label": "resolvereplacementdomain()"
     },
     {
@@ -1138,6 +1244,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_config_service_test",
       "community": 4,
+      "community_name": "resolveReplacementDomain",
       "norm_label": "config_service_test.go"
     },
     {
@@ -1148,6 +1255,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_config_service_test_testplatformbyhostaliases",
       "community": 4,
+      "community_name": "resolveReplacementDomain",
       "norm_label": "testplatformbyhostaliases()"
     },
     {
@@ -1158,6 +1266,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_config_service_test_go_t",
       "community": 4,
+      "community_name": "resolveReplacementDomain",
       "norm_label": "t"
     },
     {
@@ -1168,6 +1277,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_config_service_test_testactivedomainresolution",
       "community": 4,
+      "community_name": "resolveReplacementDomain",
       "norm_label": "testactivedomainresolution()"
     },
     {
@@ -1178,6 +1288,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_config_service_test_testnormalizedomainhost",
       "community": 4,
+      "community_name": "resolveReplacementDomain",
       "norm_label": "testnormalizedomainhost()"
     },
     {
@@ -1188,6 +1299,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_config_service_test_testnormalizedomainhostinvalidinput",
       "community": 4,
+      "community_name": "resolveReplacementDomain",
       "norm_label": "testnormalizedomainhostinvalidinput()"
     },
     {
@@ -1198,6 +1310,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_config_service_test_testplatformbykeyinvalid",
       "community": 4,
+      "community_name": "resolveReplacementDomain",
       "norm_label": "testplatformbykeyinvalid()"
     },
     {
@@ -1208,6 +1321,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_feature",
       "community": 12,
+      "community_name": "EmbedFixerFeature",
       "norm_label": "embedfixer/feature.go"
     },
     {
@@ -1218,6 +1332,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_feature_go_embedfixer_embedfixerfeature",
       "community": 12,
+      "community_name": "EmbedFixerFeature",
       "norm_label": "embedfixerfeature"
     },
     {
@@ -1228,6 +1343,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_feature_newfeature",
       "community": 12,
+      "community_name": "EmbedFixerFeature",
       "norm_label": "newfeature()"
     },
     {
@@ -1238,6 +1354,7 @@
       "_origin": "ast",
       "id": "embedfixer_embedfixerfeature_slashcommands",
       "community": 12,
+      "community_name": "EmbedFixerFeature",
       "norm_label": ".slashcommands()"
     },
     {
@@ -1248,6 +1365,7 @@
       "_origin": "ast",
       "id": "embedfixer_embedfixerfeature_models",
       "community": 12,
+      "community_name": "EmbedFixerFeature",
       "norm_label": ".models()"
     },
     {
@@ -1258,6 +1376,7 @@
       "_origin": "ast",
       "id": "embedfixer_embedfixerfeature_registerevents",
       "community": 12,
+      "community_name": "EmbedFixerFeature",
       "norm_label": ".registerevents()"
     },
     {
@@ -1268,6 +1387,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_handlers",
       "community": 8,
+      "community_name": ".EmbedFixerHandler",
       "norm_label": "embedfixer/handlers.go"
     },
     {
@@ -1278,6 +1398,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_handlers_hasnofixtag",
       "community": 8,
+      "community_name": ".EmbedFixerHandler",
       "norm_label": "hasnofixtag()"
     },
     {
@@ -1288,6 +1409,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_handlers_fixedurlfromdomain",
       "community": 8,
+      "community_name": ".EmbedFixerHandler",
       "norm_label": "fixedurlfromdomain()"
     },
     {
@@ -1298,6 +1420,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_handlers_buildfixedembedmessage",
       "community": 8,
+      "community_name": ".EmbedFixerHandler",
       "norm_label": "buildfixedembedmessage()"
     },
     {
@@ -1308,6 +1431,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_handlers_go_messagecreate",
       "community": 8,
+      "community_name": ".EmbedFixerHandler",
       "norm_label": "messagecreate"
     },
     {
@@ -1318,6 +1442,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_handlers_go_embedfixer_embedfixerfeature",
       "community": 8,
+      "community_name": ".EmbedFixerHandler",
       "norm_label": "embedfixerfeature"
     },
     {
@@ -1328,6 +1453,7 @@
       "_origin": "ast",
       "id": "embedfixer_embedfixerfeature_embedfixerhandler",
       "community": 8,
+      "community_name": ".EmbedFixerHandler",
       "norm_label": ".embedfixerhandler()"
     },
     {
@@ -1338,6 +1464,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_handlers_go_session",
       "community": 8,
+      "community_name": ".EmbedFixerHandler",
       "norm_label": "session"
     },
     {
@@ -1348,6 +1475,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_models",
       "community": 24,
+      "community_name": "EmbedFixerDomainOverride",
       "norm_label": "embedfixer/models.go"
     },
     {
@@ -1358,6 +1486,7 @@
       "_origin": "ast",
       "id": "embedfixer_embedfixerdomainoverride",
       "community": 24,
+      "community_name": "EmbedFixerDomainOverride",
       "norm_label": "embedfixerdomainoverride"
     },
     {
@@ -1368,6 +1497,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_models_go_model",
       "community": 24,
+      "community_name": "EmbedFixerDomainOverride",
       "norm_label": "model"
     },
     {
@@ -1378,6 +1508,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_nofix_test",
       "community": 8,
+      "community_name": ".EmbedFixerHandler",
       "norm_label": "nofix_test.go"
     },
     {
@@ -1388,6 +1519,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_nofix_test_testhasnofixtag",
       "community": 8,
+      "community_name": ".EmbedFixerHandler",
       "norm_label": "testhasnofixtag()"
     },
     {
@@ -1398,6 +1530,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_nofix_test_go_t",
       "community": 8,
+      "community_name": ".EmbedFixerHandler",
       "norm_label": "t"
     },
     {
@@ -1408,6 +1541,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_nofix_test_testembedfixercommandincludesnofixsubcommand",
       "community": 8,
+      "community_name": ".EmbedFixerHandler",
       "norm_label": "testembedfixercommandincludesnofixsubcommand()"
     },
     {
@@ -1418,6 +1552,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_platforms",
       "community": 4,
+      "community_name": "resolveReplacementDomain",
       "norm_label": "platforms.go"
     },
     {
@@ -1428,6 +1563,7 @@
       "_origin": "ast",
       "id": "embedfixer_platformconfig",
       "community": 4,
+      "community_name": "resolveReplacementDomain",
       "norm_label": "platformconfig"
     },
     {
@@ -1438,6 +1574,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_platforms_platformbykey",
       "community": 4,
+      "community_name": "resolveReplacementDomain",
       "norm_label": "platformbykey()"
     },
     {
@@ -1448,6 +1585,7 @@
       "_origin": "ast",
       "id": "internal_features_embedfixer_platforms_platformbyhost",
       "community": 4,
+      "community_name": "resolveReplacementDomain",
       "norm_label": "platformbyhost()"
     },
     {
@@ -1458,6 +1596,7 @@
       "_origin": "ast",
       "id": "internal_features_finance_commands",
       "community": 38,
+      "community_name": "finance/commands.go",
       "norm_label": "finance/commands.go"
     },
     {
@@ -1468,6 +1607,7 @@
       "_origin": "ast",
       "id": "internal_features_finance_commands_go_finance_financefeature",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": "financefeature"
     },
     {
@@ -1478,6 +1618,7 @@
       "_origin": "ast",
       "id": "finance_financefeature_dollarcommand",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": ".dollarcommand()"
     },
     {
@@ -1488,6 +1629,7 @@
       "_origin": "ast",
       "id": "finance_financefeature_convertcommand",
       "community": 1,
+      "community_name": "SlashCommand",
       "norm_label": ".convertcommand()"
     },
     {
@@ -1498,6 +1640,7 @@
       "_origin": "ast",
       "id": "internal_features_finance_feature",
       "community": 13,
+      "community_name": "FinanceFeature",
       "norm_label": "finance/feature.go"
     },
     {
@@ -1508,6 +1651,7 @@
       "_origin": "ast",
       "id": "internal_features_finance_feature_go_finance_financefeature",
       "community": 13,
+      "community_name": "FinanceFeature",
       "norm_label": "financefeature"
     },
     {
@@ -1518,6 +1662,7 @@
       "_origin": "ast",
       "id": "internal_features_finance_feature_newfeature",
       "community": 13,
+      "community_name": "FinanceFeature",
       "norm_label": "newfeature()"
     },
     {
@@ -1528,6 +1673,7 @@
       "_origin": "ast",
       "id": "finance_financefeature_slashcommands",
       "community": 13,
+      "community_name": "FinanceFeature",
       "norm_label": ".slashcommands()"
     },
     {
@@ -1538,6 +1684,7 @@
       "_origin": "ast",
       "id": "finance_financefeature_models",
       "community": 13,
+      "community_name": "FinanceFeature",
       "norm_label": ".models()"
     },
     {
@@ -1548,6 +1695,7 @@
       "_origin": "ast",
       "id": "finance_financefeature_registerevents",
       "community": 13,
+      "community_name": "FinanceFeature",
       "norm_label": ".registerevents()"
     },
     {
@@ -1558,6 +1706,7 @@
       "_origin": "ast",
       "id": "internal_features_finance_subcommands_convert_bcv",
       "community": 39,
+      "community_name": "convert_bcv.go",
       "norm_label": "convert_bcv.go"
     },
     {
@@ -1568,6 +1717,7 @@
       "_origin": "ast",
       "id": "internal_features_finance_subcommands_convert_paralelo",
       "community": 40,
+      "community_name": "convert_paralelo.go",
       "norm_label": "convert_paralelo.go"
     },
     {
@@ -1578,6 +1728,7 @@
       "_origin": "ast",
       "id": "internal_features_finance_subcommands_dollar_all",
       "community": 6,
+      "community_name": "fetchRates",
       "norm_label": "dollar_all.go"
     },
     {
@@ -1588,6 +1739,7 @@
       "_origin": "ast",
       "id": "subcommands_currencyratesresult",
       "community": 6,
+      "community_name": "fetchRates",
       "norm_label": "currencyratesresult"
     },
     {
@@ -1598,6 +1750,7 @@
       "_origin": "ast",
       "id": "internal_features_finance_subcommands_dollar_all_fetchrates",
       "community": 6,
+      "community_name": "fetchRates",
       "norm_label": "fetchrates()"
     },
     {
@@ -1608,6 +1761,7 @@
       "_origin": "ast",
       "id": "internal_features_finance_subcommands_dollar_all_go_client",
       "community": 6,
+      "community_name": "fetchRates",
       "norm_label": "client"
     },
     {
@@ -1618,6 +1772,7 @@
       "_origin": "ast",
       "id": "internal_features_finance_subcommands_dollar_all_formatratefields",
       "community": 6,
+      "community_name": "fetchRates",
       "norm_label": "formatratefields()"
     },
     {
@@ -1628,6 +1783,7 @@
       "_origin": "ast",
       "id": "messageembedfield",
       "community": 6,
+      "community_name": "fetchRates",
       "norm_label": "messageembedfield"
     },
     {
@@ -1638,6 +1794,7 @@
       "_origin": "ast",
       "id": "internal_features_finance_subcommands_dollar_all_test",
       "community": 6,
+      "community_name": "fetchRates",
       "norm_label": "dollar_all_test.go"
     },
     {
@@ -1648,6 +1805,7 @@
       "_origin": "ast",
       "id": "internal_features_finance_subcommands_dollar_all_test_testfetchratesarrayresponse",
       "community": 6,
+      "community_name": "fetchRates",
       "norm_label": "testfetchratesarrayresponse()"
     },
     {
@@ -1658,6 +1816,7 @@
       "_origin": "ast",
       "id": "internal_features_finance_subcommands_dollar_all_test_go_t",
       "community": 6,
+      "community_name": "fetchRates",
       "norm_label": "t"
     },
     {
@@ -1668,6 +1827,7 @@
       "_origin": "ast",
       "id": "internal_features_finance_subcommands_dollar_all_test_testfetchratessingleobjectresponse",
       "community": 6,
+      "community_name": "fetchRates",
       "norm_label": "testfetchratessingleobjectresponse()"
     },
     {
@@ -1678,6 +1838,7 @@
       "_origin": "ast",
       "id": "internal_features_finance_subcommands_dollar_all_test_testfetchratesfailureresponse",
       "community": 6,
+      "community_name": "fetchRates",
       "norm_label": "testfetchratesfailureresponse()"
     },
     {
@@ -1688,6 +1849,7 @@
       "_origin": "ast",
       "id": "internal_features_finance_subcommands_dollar_all_test_testformatratefields",
       "community": 6,
+      "community_name": "fetchRates",
       "norm_label": "testformatratefields()"
     },
     {
@@ -1698,6 +1860,7 @@
       "_origin": "ast",
       "id": "internal_features_finance_subcommands_dollar_status",
       "community": 33,
+      "community_name": "dollar_status.go",
       "norm_label": "dollar_status.go"
     },
     {
@@ -1708,6 +1871,7 @@
       "_origin": "ast",
       "id": "subcommands_statusresponse",
       "community": 33,
+      "community_name": "dollar_status.go",
       "norm_label": "statusresponse"
     },
     {
@@ -1718,6 +1882,7 @@
       "_origin": "ast",
       "id": "internal_features_finance_subcommands_types",
       "community": 6,
+      "community_name": "fetchRates",
       "norm_label": "subcommands/types.go"
     },
     {
@@ -1728,6 +1893,7 @@
       "_origin": "ast",
       "id": "subcommands_dollarsource",
       "community": 6,
+      "community_name": "fetchRates",
       "norm_label": "dollarsource"
     },
     {
@@ -1738,6 +1904,7 @@
       "_origin": "ast",
       "id": "subcommands_dolarresponse",
       "community": 6,
+      "community_name": "fetchRates",
       "norm_label": "dolarresponse"
     },
     {
@@ -1748,6 +1915,7 @@
       "_origin": "ast",
       "id": "internal_features_members_commands",
       "community": 41,
+      "community_name": "members/commands.go",
       "norm_label": "members/commands.go"
     },
     {
@@ -1758,6 +1926,7 @@
       "_origin": "ast",
       "id": "internal_features_members_feature",
       "community": 14,
+      "community_name": "MembersFeature",
       "norm_label": "members/feature.go"
     },
     {
@@ -1768,6 +1937,7 @@
       "_origin": "ast",
       "id": "internal_features_members_feature_go_members_membersfeature",
       "community": 14,
+      "community_name": "MembersFeature",
       "norm_label": "membersfeature"
     },
     {
@@ -1778,6 +1948,7 @@
       "_origin": "ast",
       "id": "internal_features_members_feature_newfeature",
       "community": 14,
+      "community_name": "MembersFeature",
       "norm_label": "newfeature()"
     },
     {
@@ -1788,6 +1959,7 @@
       "_origin": "ast",
       "id": "members_membersfeature_slashcommands",
       "community": 14,
+      "community_name": "MembersFeature",
       "norm_label": ".slashcommands()"
     },
     {
@@ -1798,6 +1970,7 @@
       "_origin": "ast",
       "id": "members_membersfeature_models",
       "community": 14,
+      "community_name": "MembersFeature",
       "norm_label": ".models()"
     },
     {
@@ -1808,6 +1981,7 @@
       "_origin": "ast",
       "id": "members_membersfeature_registerevents",
       "community": 14,
+      "community_name": "MembersFeature",
       "norm_label": ".registerevents()"
     },
     {
@@ -1818,6 +1992,7 @@
       "_origin": "ast",
       "id": "internal_features_members_handlers",
       "community": 42,
+      "community_name": "members/handlers.go",
       "norm_label": "members/handlers.go"
     },
     {
@@ -1828,6 +2003,7 @@
       "_origin": "ast",
       "id": "internal_features_members_handlers_go_members_membersfeature",
       "community": 3,
+      "community_name": "BotContext",
       "norm_label": "membersfeature"
     },
     {
@@ -1838,6 +2014,7 @@
       "_origin": "ast",
       "id": "members_membersfeature_botresponsehandler",
       "community": 3,
+      "community_name": "BotContext",
       "norm_label": ".botresponsehandler()"
     },
     {
@@ -1848,6 +2025,7 @@
       "_origin": "ast",
       "id": "internal_features_members_handlers_go_session",
       "community": 3,
+      "community_name": "BotContext",
       "norm_label": "session"
     },
     {
@@ -1858,6 +2036,7 @@
       "_origin": "ast",
       "id": "internal_features_members_handlers_go_messagecreate",
       "community": 3,
+      "community_name": "BotContext",
       "norm_label": "messagecreate"
     },
     {
@@ -1868,6 +2047,7 @@
       "_origin": "ast",
       "id": "members_membersfeature_guildmemberwelcomehandler",
       "community": 3,
+      "community_name": "BotContext",
       "norm_label": ".guildmemberwelcomehandler()"
     },
     {
@@ -1878,6 +2058,7 @@
       "_origin": "ast",
       "id": "guildmemberadd",
       "community": 3,
+      "community_name": "BotContext",
       "norm_label": "guildmemberadd"
     },
     {
@@ -1888,6 +2069,7 @@
       "_origin": "ast",
       "id": "members_membersfeature_guildmemberremovemessagehandler",
       "community": 3,
+      "community_name": "BotContext",
       "norm_label": ".guildmemberremovemessagehandler()"
     },
     {
@@ -1898,6 +2080,7 @@
       "_origin": "ast",
       "id": "guildmemberremove",
       "community": 3,
+      "community_name": "BotContext",
       "norm_label": "guildmemberremove"
     },
     {
@@ -1908,6 +2091,7 @@
       "_origin": "ast",
       "id": "members_membersfeature_guildmemberaddrolehandler",
       "community": 3,
+      "community_name": "BotContext",
       "norm_label": ".guildmemberaddrolehandler()"
     },
     {
@@ -1918,6 +2102,7 @@
       "_origin": "ast",
       "id": "members_membersfeature_messagereactionaddhandler",
       "community": 3,
+      "community_name": "BotContext",
       "norm_label": ".messagereactionaddhandler()"
     },
     {
@@ -1928,6 +2113,7 @@
       "_origin": "ast",
       "id": "messagereactionadd",
       "community": 3,
+      "community_name": "BotContext",
       "norm_label": "messagereactionadd"
     },
     {
@@ -1938,6 +2124,7 @@
       "_origin": "ast",
       "id": "internal_features_members_model_models",
       "community": 17,
+      "community_name": "model/models.go",
       "norm_label": "model/models.go"
     },
     {
@@ -1948,6 +2135,7 @@
       "_origin": "ast",
       "id": "model_welcomerole",
       "community": 17,
+      "community_name": "model/models.go",
       "norm_label": "welcomerole"
     },
     {
@@ -1958,6 +2146,7 @@
       "_origin": "ast",
       "id": "internal_features_members_model_models_go_model",
       "community": 17,
+      "community_name": "model/models.go",
       "norm_label": "model"
     },
     {
@@ -1968,6 +2157,7 @@
       "_origin": "ast",
       "id": "model_responsemessage",
       "community": 17,
+      "community_name": "model/models.go",
       "norm_label": "responsemessage"
     },
     {
@@ -1978,6 +2168,7 @@
       "_origin": "ast",
       "id": "internal_features_members_subcommands_response_message_add",
       "community": 43,
+      "community_name": "response_message_add.go",
       "norm_label": "response_message_add.go"
     },
     {
@@ -1988,6 +2179,7 @@
       "_origin": "ast",
       "id": "internal_features_members_subcommands_response_message_delete",
       "community": 44,
+      "community_name": "response_message_delete.go",
       "norm_label": "response_message_delete.go"
     },
     {
@@ -1998,6 +2190,7 @@
       "_origin": "ast",
       "id": "internal_features_members_subcommands_response_message_list",
       "community": 45,
+      "community_name": "response_message_list.go",
       "norm_label": "response_message_list.go"
     },
     {
@@ -2008,6 +2201,7 @@
       "_origin": "ast",
       "id": "internal_features_members_subcommands_welcome_role_add",
       "community": 46,
+      "community_name": "welcome_role_add.go",
       "norm_label": "welcome_role_add.go"
     },
     {
@@ -2018,6 +2212,7 @@
       "_origin": "ast",
       "id": "internal_features_members_subcommands_welcome_role_delete",
       "community": 47,
+      "community_name": "welcome_role_delete.go",
       "norm_label": "welcome_role_delete.go"
     },
     {
@@ -2028,6 +2223,7 @@
       "_origin": "ast",
       "id": "internal_features_members_subcommands_welcome_role_list",
       "community": 48,
+      "community_name": "welcome_role_list.go",
       "norm_label": "welcome_role_list.go"
     },
     {
@@ -2038,6 +2234,7 @@
       "_origin": "ast",
       "id": "internal_features_members_types",
       "community": 26,
+      "community_name": "LeaveMessage",
       "norm_label": "members/types.go"
     },
     {
@@ -2048,6 +2245,7 @@
       "_origin": "ast",
       "id": "members_leavemessage",
       "community": 26,
+      "community_name": "LeaveMessage",
       "norm_label": "leavemessage"
     },
     {
@@ -2058,6 +2256,7 @@
       "_origin": "ast",
       "id": "messageembed",
       "community": 26,
+      "community_name": "LeaveMessage",
       "norm_label": "messageembed"
     },
     {
@@ -2067,7 +2266,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "internal_features_parrot_feature",
-      "community": 2,
+      "community": 53,
+      "community_name": "ParrotFeature",
       "norm_label": "parrot/feature.go"
     },
     {
@@ -2077,7 +2277,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "internal_features_parrot_feature_go_parrot_parrotfeature",
-      "community": 2,
+      "community": 53,
+      "community_name": "ParrotFeature",
       "norm_label": "parrotfeature"
     },
     {
@@ -2087,7 +2288,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "internal_features_parrot_feature_newfeature",
-      "community": 2,
+      "community": 53,
+      "community_name": "ParrotFeature",
       "norm_label": "newfeature()"
     },
     {
@@ -2097,7 +2299,8 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "parrot_parrotfeature_slashcommands",
-      "community": 2,
+      "community": 53,
+      "community_name": "ParrotFeature",
       "norm_label": ".slashcommands()"
     },
     {
@@ -2107,7 +2310,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "parrot_parrotfeature_models",
-      "community": 2,
+      "community": 53,
+      "community_name": "ParrotFeature",
       "norm_label": ".models()"
     },
     {
@@ -2117,7 +2321,8 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "parrot_parrotfeature_registerevents",
-      "community": 2,
+      "community": 53,
+      "community_name": "ParrotFeature",
       "norm_label": ".registerevents()"
     },
     {
@@ -2128,6 +2333,7 @@
       "_origin": "ast",
       "id": "internal_features_parrot_handlers",
       "community": 49,
+      "community_name": "parrot/handlers.go",
       "norm_label": "parrot/handlers.go"
     },
     {
@@ -2138,6 +2344,7 @@
       "_origin": "ast",
       "id": "internal_features_parrot_handlers_go_parrot_parrotfeature",
       "community": 3,
+      "community_name": "BotContext",
       "norm_label": "parrotfeature"
     },
     {
@@ -2148,6 +2355,7 @@
       "_origin": "ast",
       "id": "parrot_parrotfeature_parrothandler",
       "community": 3,
+      "community_name": "BotContext",
       "norm_label": ".parrothandler()"
     },
     {
@@ -2158,6 +2366,7 @@
       "_origin": "ast",
       "id": "internal_features_parrot_handlers_go_session",
       "community": 3,
+      "community_name": "BotContext",
       "norm_label": "session"
     },
     {
@@ -2168,6 +2377,7 @@
       "_origin": "ast",
       "id": "internal_features_parrot_handlers_go_messagecreate",
       "community": 3,
+      "community_name": "BotContext",
       "norm_label": "messagecreate"
     },
     {
@@ -2178,6 +2388,7 @@
       "_origin": "ast",
       "id": "internal_features_ping_commands",
       "community": 50,
+      "community_name": "ping/commands.go",
       "norm_label": "ping/commands.go"
     },
     {
@@ -2188,6 +2399,7 @@
       "_origin": "ast",
       "id": "internal_features_ping_feature",
       "community": 15,
+      "community_name": "PingFeature",
       "norm_label": "ping/feature.go"
     },
     {
@@ -2198,6 +2410,7 @@
       "_origin": "ast",
       "id": "ping_pingfeature",
       "community": 15,
+      "community_name": "PingFeature",
       "norm_label": "pingfeature"
     },
     {
@@ -2208,6 +2421,7 @@
       "_origin": "ast",
       "id": "internal_features_ping_feature_newfeature",
       "community": 15,
+      "community_name": "PingFeature",
       "norm_label": "newfeature()"
     },
     {
@@ -2218,6 +2432,7 @@
       "_origin": "ast",
       "id": "ping_pingfeature_slashcommands",
       "community": 15,
+      "community_name": "PingFeature",
       "norm_label": ".slashcommands()"
     },
     {
@@ -2228,6 +2443,7 @@
       "_origin": "ast",
       "id": "ping_pingfeature_models",
       "community": 15,
+      "community_name": "PingFeature",
       "norm_label": ".models()"
     },
     {
@@ -2238,6 +2454,7 @@
       "_origin": "ast",
       "id": "ping_pingfeature_registerevents",
       "community": 15,
+      "community_name": "PingFeature",
       "norm_label": ".registerevents()"
     },
     {
@@ -2248,6 +2465,7 @@
       "_origin": "ast",
       "id": "internal_version_version",
       "community": 34,
+      "community_name": "version.go",
       "norm_label": "version.go"
     },
     {
@@ -2258,7 +2476,118 @@
       "_origin": "ast",
       "id": "internal_version_version_info",
       "community": 34,
+      "community_name": "version.go",
       "norm_label": "info()"
+    },
+    {
+      "label": "spec-template.md",
+      "file_type": "document",
+      "source_file": "docs/spec-template.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_spec_template",
+      "community": 52,
+      "community_name": "Name",
+      "norm_label": "spec-template.md"
+    },
+    {
+      "label": "Name",
+      "file_type": "document",
+      "source_file": "docs/spec-template.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_spec_template_name",
+      "community": 52,
+      "community_name": "Name",
+      "norm_label": "name"
+    },
+    {
+      "label": "Purpose",
+      "file_type": "document",
+      "source_file": "docs/spec-template.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "docs_spec_template_purpose",
+      "community": 52,
+      "community_name": "Name",
+      "norm_label": "purpose"
+    },
+    {
+      "label": "Responsibilities",
+      "file_type": "document",
+      "source_file": "docs/spec-template.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "docs_spec_template_responsibilities",
+      "community": 52,
+      "community_name": "Name",
+      "norm_label": "responsibilities"
+    },
+    {
+      "label": "Rules",
+      "file_type": "document",
+      "source_file": "docs/spec-template.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "docs_spec_template_rules",
+      "community": 52,
+      "community_name": "Name",
+      "norm_label": "rules"
+    },
+    {
+      "label": "Scenarios",
+      "file_type": "document",
+      "source_file": "docs/spec-template.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "docs_spec_template_scenarios",
+      "community": 52,
+      "community_name": "Name",
+      "norm_label": "scenarios"
+    },
+    {
+      "label": "Scenario: Descriptive behavior",
+      "file_type": "document",
+      "source_file": "docs/spec-template.md",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "docs_spec_template_scenario_descriptive_behavior",
+      "community": 52,
+      "community_name": "Name",
+      "norm_label": "scenario: descriptive behavior"
+    },
+    {
+      "label": "Boundaries",
+      "file_type": "document",
+      "source_file": "docs/spec-template.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "docs_spec_template_boundaries",
+      "community": 52,
+      "community_name": "Name",
+      "norm_label": "boundaries"
+    },
+    {
+      "label": "Dependencies",
+      "file_type": "document",
+      "source_file": "docs/spec-template.md",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "docs_spec_template_dependencies",
+      "community": 52,
+      "community_name": "Name",
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "Writing Guidelines",
+      "file_type": "document",
+      "source_file": "docs/spec-template.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "docs_spec_template_writing_guidelines",
+      "community": 52,
+      "community_name": "Name",
+      "norm_label": "writing guidelines"
     },
     {
       "label": "GitHub Actions Docker Publish Workflow",
@@ -2269,9 +2598,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_github_workflows_docker_publish_github_actions_workflow",
       "community": 19,
-      "norm_label": "github actions docker publish workflow"
+      "norm_label": "github actions docker publish workflow",
+      "_origin": "semantic",
+      "id": "_github_workflows_docker_publish_github_actions_workflow",
+      "community_name": "GitHub Actions Docker Publish Workflow"
     },
     {
       "label": "Main Branch Push Trigger",
@@ -2282,9 +2613,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_github_workflows_docker_publish_main_push_trigger",
       "community": 19,
-      "norm_label": "main branch push trigger"
+      "norm_label": "main branch push trigger",
+      "_origin": "semantic",
+      "id": "_github_workflows_docker_publish_main_push_trigger",
+      "community_name": "GitHub Actions Docker Publish Workflow"
     },
     {
       "label": "Build and Push Image Job",
@@ -2295,9 +2628,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_github_workflows_docker_publish_build_and_push_image_job",
       "community": 5,
-      "norm_label": "build and push image job"
+      "norm_label": "build and push image job",
+      "_origin": "semantic",
+      "id": "_github_workflows_docker_publish_build_and_push_image_job",
+      "community_name": "Stack Bot Service"
     },
     {
       "label": "GitHub Container Registry",
@@ -2308,9 +2643,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_github_workflows_docker_publish_github_container_registry",
       "community": 5,
-      "norm_label": "github container registry"
+      "norm_label": "github container registry",
+      "_origin": "semantic",
+      "id": "_github_workflows_docker_publish_github_container_registry",
+      "community_name": "Stack Bot Service"
     },
     {
       "label": "Latest Docker Image Tag",
@@ -2321,9 +2658,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_github_workflows_docker_publish_latest_image_tag",
       "community": 5,
-      "norm_label": "latest docker image tag"
+      "norm_label": "latest docker image tag",
+      "_origin": "semantic",
+      "id": "_github_workflows_docker_publish_latest_image_tag",
+      "community_name": "Stack Bot Service"
     },
     {
       "label": "Commit SHA Docker Image Tag",
@@ -2334,9 +2673,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_github_workflows_docker_publish_sha_image_tag",
       "community": 5,
-      "norm_label": "commit sha docker image tag"
+      "norm_label": "commit sha docker image tag",
+      "_origin": "semantic",
+      "id": "_github_workflows_docker_publish_sha_image_tag",
+      "community_name": "Stack Bot Service"
     },
     {
       "label": "Deploy Job",
@@ -2347,9 +2688,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_github_workflows_docker_publish_deploy_job",
       "community": 5,
-      "norm_label": "deploy job"
+      "norm_label": "deploy job",
+      "_origin": "semantic",
+      "id": "_github_workflows_docker_publish_deploy_job",
+      "community_name": "Stack Bot Service"
     },
     {
       "label": "Docker Stack Deploy Action",
@@ -2360,9 +2703,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_github_workflows_docker_publish_stack_deploy_action",
       "community": 5,
-      "norm_label": "docker stack deploy action"
+      "norm_label": "docker stack deploy action",
+      "_origin": "semantic",
+      "id": "_github_workflows_docker_publish_stack_deploy_action",
+      "community_name": "Stack Bot Service"
     },
     {
       "label": "gatoc Project",
@@ -2373,9 +2718,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_md_gatoc_project",
       "community": 19,
-      "norm_label": "gatoc project"
+      "norm_label": "gatoc project",
+      "_origin": "semantic",
+      "id": "agents_md_gatoc_project",
+      "community_name": "GitHub Actions Docker Publish Workflow"
     },
     {
       "label": "Discord Bot",
@@ -2386,9 +2733,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_md_discord_bot",
       "community": 16,
-      "norm_label": "discord bot"
+      "norm_label": "discord bot",
+      "_origin": "semantic",
+      "id": "agents_md_discord_bot",
+      "community_name": "Discord Bot"
     },
     {
       "label": "discordgo",
@@ -2399,9 +2748,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_md_discordgo",
       "community": 16,
-      "norm_label": "discordgo"
+      "norm_label": "discordgo",
+      "_origin": "semantic",
+      "id": "agents_md_discordgo",
+      "community_name": "Discord Bot"
     },
     {
       "label": "GORM",
@@ -2412,9 +2763,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_md_gorm",
       "community": 16,
-      "norm_label": "gorm"
+      "norm_label": "gorm",
+      "_origin": "semantic",
+      "id": "agents_md_gorm",
+      "community_name": "Discord Bot"
     },
     {
       "label": "Postgres",
@@ -2425,9 +2778,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_md_postgres",
       "community": 16,
-      "norm_label": "postgres"
+      "norm_label": "postgres",
+      "_origin": "semantic",
+      "id": "agents_md_postgres",
+      "community_name": "Discord Bot"
     },
     {
       "label": "Feature-Based Module System",
@@ -2438,9 +2793,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_md_feature_based_module_system",
       "community": 20,
-      "norm_label": "feature-based module system"
+      "norm_label": "feature-based module system",
+      "_origin": "semantic",
+      "id": "agents_md_feature_based_module_system",
+      "community_name": "Feature-Based Module System"
     },
     {
       "label": "bot.Feature Interface",
@@ -2451,9 +2808,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_md_bot_feature_interface",
       "community": 20,
-      "norm_label": "bot.feature interface"
+      "norm_label": "bot.feature interface",
+      "_origin": "semantic",
+      "id": "agents_md_bot_feature_interface",
+      "community_name": "Feature-Based Module System"
     },
     {
       "label": "Manual Feature Registration",
@@ -2464,9 +2823,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_md_manual_feature_registration",
       "community": 20,
-      "norm_label": "manual feature registration"
+      "norm_label": "manual feature registration",
+      "_origin": "semantic",
+      "id": "agents_md_manual_feature_registration",
+      "community_name": "Feature-Based Module System"
     },
     {
       "label": "Feature-Owned GORM Models",
@@ -2477,9 +2838,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_md_feature_owned_gorm_models",
       "community": 21,
-      "norm_label": "feature-owned gorm models"
+      "norm_label": "feature-owned gorm models",
+      "_origin": "semantic",
+      "id": "agents_md_feature_owned_gorm_models",
+      "community_name": "Feature-Owned GORM Models"
     },
     {
       "label": "Members Leaf Model Package",
@@ -2491,9 +2854,11 @@
       "author": null,
       "contributor": null,
       "rationale": "The leaf package avoids an import cycle with members/subcommands.",
-      "id": "agents_md_members_leaf_model_package",
       "community": 21,
-      "norm_label": "members leaf model package"
+      "norm_label": "members leaf model package",
+      "_origin": "semantic",
+      "id": "agents_md_members_leaf_model_package",
+      "community_name": "Feature-Owned GORM Models"
     },
     {
       "label": "Database Migrate",
@@ -2504,9 +2869,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_md_database_migrate",
       "community": 21,
-      "norm_label": "database migrate"
+      "norm_label": "database migrate",
+      "_origin": "semantic",
+      "id": "agents_md_database_migrate",
+      "community_name": "Feature-Owned GORM Models"
     },
     {
       "label": "Slash Command",
@@ -2517,9 +2884,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_md_slash_command",
       "community": 29,
-      "norm_label": "slash command"
+      "norm_label": "slash command",
+      "_origin": "semantic",
+      "id": "agents_md_slash_command",
+      "community_name": "Router Event Registration"
     },
     {
       "label": "Router Event Registration",
@@ -2530,9 +2899,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_md_router_event_registration",
       "community": 29,
-      "norm_label": "router event registration"
+      "norm_label": "router event registration",
+      "_origin": "semantic",
+      "id": "agents_md_router_event_registration",
+      "community_name": "Router Event Registration"
     },
     {
       "label": "Required Verification Checks",
@@ -2544,9 +2915,11 @@
       "author": null,
       "contributor": null,
       "rationale": "The project requires compile, vet, format, and test checks after every code change before claiming completion.",
-      "id": "agents_md_required_verification_checks",
       "community": 37,
-      "norm_label": "required verification checks"
+      "norm_label": "required verification checks",
+      "_origin": "semantic",
+      "id": "agents_md_required_verification_checks",
+      "community_name": "Required Verification Checks"
     },
     {
       "label": "air Hot Reloading",
@@ -2557,9 +2930,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_md_air_hot_reloading",
       "community": 35,
-      "norm_label": "air hot reloading"
+      "norm_label": "air hot reloading",
+      "_origin": "semantic",
+      "id": "agents_md_air_hot_reloading",
+      "community_name": "air Hot Reloading"
     },
     {
       "label": "OpenSpec",
@@ -2570,9 +2945,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_md_openspec",
       "community": 28,
-      "norm_label": "openspec"
+      "norm_label": "openspec",
+      "_origin": "semantic",
+      "id": "agents_md_openspec",
+      "community_name": "Co-Located Living Specs"
     },
     {
       "label": "Co-Located Living Specs",
@@ -2584,9 +2961,11 @@
       "author": null,
       "contributor": null,
       "rationale": "Living specs are kept beside feature modules so they describe the current post-change reality.",
-      "id": "agents_md_colocated_living_specs",
       "community": 28,
-      "norm_label": "co-located living specs"
+      "norm_label": "co-located living specs",
+      "_origin": "semantic",
+      "id": "agents_md_colocated_living_specs",
+      "community_name": "Co-Located Living Specs"
     },
     {
       "label": "Docker Swarm Deployment",
@@ -2597,9 +2976,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_md_docker_swarm_deployment",
       "community": 5,
-      "norm_label": "docker swarm deployment"
+      "norm_label": "docker swarm deployment",
+      "_origin": "semantic",
+      "id": "agents_md_docker_swarm_deployment",
+      "community_name": "Stack Bot Service"
     },
     {
       "label": "Main App Entrypoint",
@@ -2610,9 +2991,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_md_main_app_entrypoint",
       "community": 36,
-      "norm_label": "main app entrypoint"
+      "norm_label": "main app entrypoint",
+      "_origin": "semantic",
+      "id": "agents_md_main_app_entrypoint",
+      "community_name": "Main App Entrypoint"
     },
     {
       "label": "Compose Database Service",
@@ -2623,9 +3006,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docker_compose_yaml_db_service",
       "community": 11,
-      "norm_label": "compose database service"
+      "norm_label": "compose database service",
+      "_origin": "semantic",
+      "id": "docker_compose_yaml_db_service",
+      "community_name": "Compose Bot Service"
     },
     {
       "label": "Postgres Latest Image",
@@ -2636,9 +3021,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docker_compose_yaml_postgres_latest",
       "community": 11,
-      "norm_label": "postgres latest image"
+      "norm_label": "postgres latest image",
+      "_origin": "semantic",
+      "id": "docker_compose_yaml_postgres_latest",
+      "community_name": "Compose Bot Service"
     },
     {
       "label": "discordbot Database",
@@ -2649,9 +3036,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docker_compose_yaml_discordbot_database",
       "community": 11,
-      "norm_label": "discordbot database"
+      "norm_label": "discordbot database",
+      "_origin": "semantic",
+      "id": "docker_compose_yaml_discordbot_database",
+      "community_name": "Compose Bot Service"
     },
     {
       "label": "Compose Database Volume",
@@ -2662,9 +3051,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docker_compose_yaml_db_data_volume",
       "community": 11,
-      "norm_label": "compose database volume"
+      "norm_label": "compose database volume",
+      "_origin": "semantic",
+      "id": "docker_compose_yaml_db_data_volume",
+      "community_name": "Compose Bot Service"
     },
     {
       "label": "Compose Bot Service",
@@ -2675,9 +3066,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docker_compose_yaml_bot_service",
       "community": 11,
-      "norm_label": "compose bot service"
+      "norm_label": "compose bot service",
+      "_origin": "semantic",
+      "id": "docker_compose_yaml_bot_service",
+      "community_name": "Compose Bot Service"
     },
     {
       "label": "Development Build Target",
@@ -2688,9 +3081,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docker_compose_yaml_dev_build_target",
       "community": 11,
-      "norm_label": "development build target"
+      "norm_label": "development build target",
+      "_origin": "semantic",
+      "id": "docker_compose_yaml_dev_build_target",
+      "community_name": "Compose Bot Service"
     },
     {
       "label": ".env File",
@@ -2701,9 +3096,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docker_compose_yaml_env_file",
       "community": 11,
-      "norm_label": ".env file"
+      "norm_label": ".env file",
+      "_origin": "semantic",
+      "id": "docker_compose_yaml_env_file",
+      "community_name": "Compose Bot Service"
     },
     {
       "label": "App Bind Mount",
@@ -2714,9 +3111,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docker_compose_yaml_app_bind_mount",
       "community": 11,
-      "norm_label": "app bind mount"
+      "norm_label": "app bind mount",
+      "_origin": "semantic",
+      "id": "docker_compose_yaml_app_bind_mount",
+      "community_name": "Compose Bot Service"
     },
     {
       "label": "Stack Bot Service",
@@ -2727,9 +3126,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docker_stack_yaml_bot_service",
       "community": 5,
-      "norm_label": "stack bot service"
+      "norm_label": "stack bot service",
+      "_origin": "semantic",
+      "id": "docker_stack_yaml_bot_service",
+      "community_name": "Stack Bot Service"
     },
     {
       "label": "gatoc Container Image",
@@ -2740,9 +3141,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docker_stack_yaml_gatoc_container_image",
       "community": 5,
-      "norm_label": "gatoc container image"
+      "norm_label": "gatoc container image",
+      "_origin": "semantic",
+      "id": "docker_stack_yaml_gatoc_container_image",
+      "community_name": "Stack Bot Service"
     },
     {
       "label": "Git Commit Hash Image Tag",
@@ -2753,9 +3156,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docker_stack_yaml_git_commit_hash_tag",
       "community": 5,
-      "norm_label": "git commit hash image tag"
+      "norm_label": "git commit hash image tag",
+      "_origin": "semantic",
+      "id": "docker_stack_yaml_git_commit_hash_tag",
+      "community_name": "Stack Bot Service"
     },
     {
       "label": "Bot Overlay Network",
@@ -2766,9 +3171,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docker_stack_yaml_bot_network",
       "community": 5,
-      "norm_label": "bot overlay network"
+      "norm_label": "bot overlay network",
+      "_origin": "semantic",
+      "id": "docker_stack_yaml_bot_network",
+      "community_name": "Stack Bot Service"
     },
     {
       "label": "External Swarm Secrets",
@@ -2779,9 +3186,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docker_stack_yaml_external_swarm_secrets",
       "community": 5,
-      "norm_label": "external swarm secrets"
+      "norm_label": "external swarm secrets",
+      "_origin": "semantic",
+      "id": "docker_stack_yaml_external_swarm_secrets",
+      "community_name": "Stack Bot Service"
     },
     {
       "label": "Secret File Environment Variables",
@@ -2792,9 +3201,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docker_stack_yaml_secret_file_environment",
       "community": 5,
-      "norm_label": "secret file environment variables"
+      "norm_label": "secret file environment variables",
+      "_origin": "semantic",
+      "id": "docker_stack_yaml_secret_file_environment",
+      "community_name": "Stack Bot Service"
     },
     {
       "label": "Stack Database Service",
@@ -2805,9 +3216,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docker_stack_yaml_stack_db_service",
       "community": 5,
-      "norm_label": "stack database service"
+      "norm_label": "stack database service",
+      "_origin": "semantic",
+      "id": "docker_stack_yaml_stack_db_service",
+      "community_name": "Stack Bot Service"
     },
     {
       "label": "Postgres 16 Image",
@@ -2818,9 +3231,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docker_stack_yaml_postgres_16",
       "community": 5,
-      "norm_label": "postgres 16 image"
+      "norm_label": "postgres 16 image",
+      "_origin": "semantic",
+      "id": "docker_stack_yaml_postgres_16",
+      "community_name": "Stack Bot Service"
     },
     {
       "label": "gatoc_bot Database",
@@ -2831,9 +3246,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docker_stack_yaml_gatoc_bot_database",
       "community": 5,
-      "norm_label": "gatoc_bot database"
+      "norm_label": "gatoc_bot database",
+      "_origin": "semantic",
+      "id": "docker_stack_yaml_gatoc_bot_database",
+      "community_name": "Stack Bot Service"
     },
     {
       "label": "Database Healthcheck",
@@ -2844,9 +3261,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docker_stack_yaml_database_healthcheck",
       "community": 5,
-      "norm_label": "database healthcheck"
+      "norm_label": "database healthcheck",
+      "_origin": "semantic",
+      "id": "docker_stack_yaml_database_healthcheck",
+      "community_name": "Stack Bot Service"
     },
     {
       "label": "Stack Database Volume",
@@ -2857,9 +3276,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docker_stack_yaml_db_data_volume",
       "community": 5,
-      "norm_label": "stack database volume"
+      "norm_label": "stack database volume",
+      "_origin": "semantic",
+      "id": "docker_stack_yaml_db_data_volume",
+      "community_name": "Stack Bot Service"
     },
     {
       "label": "embedfixer Feature",
@@ -2870,9 +3291,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "internal_features_embedfixer_spec_embedfixer_feature",
       "community": 25,
-      "norm_label": "embedfixer feature"
+      "norm_label": "embedfixer feature",
+      "_origin": "semantic",
+      "id": "internal_features_embedfixer_spec_embedfixer_feature",
+      "community_name": "Supported Social Platforms"
     },
     {
       "label": "Supported Social Platforms",
@@ -2883,9 +3306,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "internal_features_embedfixer_spec_supported_social_platforms",
       "community": 25,
-      "norm_label": "supported social platforms"
+      "norm_label": "supported social platforms",
+      "_origin": "semantic",
+      "id": "internal_features_embedfixer_spec_supported_social_platforms",
+      "community_name": "Supported Social Platforms"
     },
     {
       "label": "Replacement Domain Configuration",
@@ -2896,9 +3321,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "internal_features_embedfixer_spec_replacement_domain_configuration",
       "community": 9,
-      "norm_label": "replacement domain configuration"
+      "norm_label": "replacement domain configuration",
+      "_origin": "semantic",
+      "id": "internal_features_embedfixer_spec_replacement_domain_configuration",
+      "community_name": "Embedfixer Config Show Command"
     },
     {
       "label": "Hardcoded Platform Scope",
@@ -2910,9 +3337,11 @@
       "author": null,
       "contributor": null,
       "rationale": "Restricting the feature to currently hardcoded platforms prevents custom platform creation.",
-      "id": "internal_features_embedfixer_spec_hardcoded_platform_scope",
       "community": 25,
-      "norm_label": "hardcoded platform scope"
+      "norm_label": "hardcoded platform scope",
+      "_origin": "semantic",
+      "id": "internal_features_embedfixer_spec_hardcoded_platform_scope",
+      "community_name": "Supported Social Platforms"
     },
     {
       "label": "Source Host Aliases",
@@ -2923,9 +3352,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "internal_features_embedfixer_spec_source_host_aliases",
       "community": 9,
-      "norm_label": "source host aliases"
+      "norm_label": "source host aliases",
+      "_origin": "semantic",
+      "id": "internal_features_embedfixer_spec_source_host_aliases",
+      "community_name": "Embedfixer Config Show Command"
     },
     {
       "label": "Twitter and X Hosts",
@@ -2936,9 +3367,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "internal_features_embedfixer_spec_twitter_and_x_hosts",
       "community": 9,
-      "norm_label": "twitter and x hosts"
+      "norm_label": "twitter and x hosts",
+      "_origin": "semantic",
+      "id": "internal_features_embedfixer_spec_twitter_and_x_hosts",
+      "community_name": "Embedfixer Config Show Command"
     },
     {
       "label": "Embedfixer Config Set Command",
@@ -2949,9 +3382,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "internal_features_embedfixer_spec_config_set_command",
       "community": 9,
-      "norm_label": "embedfixer config set command"
+      "norm_label": "embedfixer config set command",
+      "_origin": "semantic",
+      "id": "internal_features_embedfixer_spec_config_set_command",
+      "community_name": "Embedfixer Config Show Command"
     },
     {
       "label": "Embedfixer Config Show Command",
@@ -2962,9 +3397,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "internal_features_embedfixer_spec_config_show_command",
       "community": 9,
-      "norm_label": "embedfixer config show command"
+      "norm_label": "embedfixer config show command",
+      "_origin": "semantic",
+      "id": "internal_features_embedfixer_spec_config_show_command",
+      "community_name": "Embedfixer Config Show Command"
     },
     {
       "label": "Default Replacement Domain",
@@ -2975,9 +3412,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "internal_features_embedfixer_spec_default_replacement_domain",
       "community": 9,
-      "norm_label": "default replacement domain"
+      "norm_label": "default replacement domain",
+      "_origin": "semantic",
+      "id": "internal_features_embedfixer_spec_default_replacement_domain",
+      "community_name": "Embedfixer Config Show Command"
     },
     {
       "label": "Custom Replacement Domain",
@@ -2988,9 +3427,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "internal_features_embedfixer_spec_custom_replacement_domain",
       "community": 9,
-      "norm_label": "custom replacement domain"
+      "norm_label": "custom replacement domain",
+      "_origin": "semantic",
+      "id": "internal_features_embedfixer_spec_custom_replacement_domain",
+      "community_name": "Embedfixer Config Show Command"
     },
     {
       "label": "#nofix Bypass Tag",
@@ -3001,9 +3442,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "internal_features_embedfixer_spec_nofix_bypass_tag",
       "community": 32,
-      "norm_label": "#nofix bypass tag"
+      "norm_label": "#nofix bypass tag",
+      "_origin": "semantic",
+      "id": "internal_features_embedfixer_spec_nofix_bypass_tag",
+      "community_name": "Embed Suppression"
     },
     {
       "label": "Embed Suppression",
@@ -3014,9 +3457,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "internal_features_embedfixer_spec_embed_suppression",
       "community": 32,
-      "norm_label": "embed suppression"
+      "norm_label": "embed suppression",
+      "_origin": "semantic",
+      "id": "internal_features_embedfixer_spec_embed_suppression",
+      "community_name": "Embed Suppression"
     },
     {
       "label": "Table-Like Embed Format",
@@ -3028,9 +3473,11 @@
       "author": null,
       "contributor": null,
       "rationale": "The structured field layout is optimized for scanning.",
-      "id": "internal_features_embedfixer_spec_table_like_embed_format",
       "community": 9,
-      "norm_label": "table-like embed format"
+      "norm_label": "table-like embed format",
+      "_origin": "semantic",
+      "id": "internal_features_embedfixer_spec_table_like_embed_format",
+      "community_name": "Embedfixer Config Show Command"
     },
     {
       "label": "Deterministic Platform Ordering",
@@ -3042,9 +3489,11 @@
       "author": null,
       "contributor": null,
       "rationale": "Stable ordering supports quick visual comparison across show responses.",
-      "id": "internal_features_embedfixer_spec_deterministic_platform_ordering",
       "community": 9,
-      "norm_label": "deterministic platform ordering"
+      "norm_label": "deterministic platform ordering",
+      "_origin": "semantic",
+      "id": "internal_features_embedfixer_spec_deterministic_platform_ordering",
+      "community_name": "Embedfixer Config Show Command"
     },
     {
       "label": "finance Feature",
@@ -3055,9 +3504,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "internal_features_finance_spec_finance_feature",
       "community": 10,
-      "norm_label": "finance feature"
+      "norm_label": "finance feature",
+      "_origin": "semantic",
+      "id": "internal_features_finance_spec_finance_feature",
+      "community_name": "/dollar all Command"
     },
     {
       "label": "/dollar all Command",
@@ -3068,9 +3519,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "internal_features_finance_spec_dollar_all_command",
       "community": 10,
-      "norm_label": "/dollar all command"
+      "norm_label": "/dollar all command",
+      "_origin": "semantic",
+      "id": "internal_features_finance_spec_dollar_all_command",
+      "community_name": "/dollar all Command"
     },
     {
       "label": "USD Exchange-Rate Data",
@@ -3081,9 +3534,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "internal_features_finance_spec_usd_exchange_rate_data",
       "community": 10,
-      "norm_label": "usd exchange-rate data"
+      "norm_label": "usd exchange-rate data",
+      "_origin": "semantic",
+      "id": "internal_features_finance_spec_usd_exchange_rate_data",
+      "community_name": "/dollar all Command"
     },
     {
       "label": "EUR Exchange-Rate Data",
@@ -3094,9 +3549,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "internal_features_finance_spec_eur_exchange_rate_data",
       "community": 10,
-      "norm_label": "eur exchange-rate data"
+      "norm_label": "eur exchange-rate data",
+      "_origin": "semantic",
+      "id": "internal_features_finance_spec_eur_exchange_rate_data",
+      "community_name": "/dollar all Command"
     },
     {
       "label": "Upstream Currency Endpoints",
@@ -3107,9 +3564,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "internal_features_finance_spec_upstream_currency_endpoints",
       "community": 10,
-      "norm_label": "upstream currency endpoints"
+      "norm_label": "upstream currency endpoints",
+      "_origin": "semantic",
+      "id": "internal_features_finance_spec_upstream_currency_endpoints",
+      "community_name": "/dollar all Command"
     },
     {
       "label": "Partial Upstream Failure Tolerance",
@@ -3121,9 +3580,11 @@
       "author": null,
       "contributor": null,
       "rationale": "Available exchange-rate data remains useful when one currency source is unavailable.",
-      "id": "internal_features_finance_spec_partial_failure_tolerance",
       "community": 10,
-      "norm_label": "partial upstream failure tolerance"
+      "norm_label": "partial upstream failure tolerance",
+      "_origin": "semantic",
+      "id": "internal_features_finance_spec_partial_failure_tolerance",
+      "community_name": "/dollar all Command"
     },
     {
       "label": "Source and Freshness Transparency",
@@ -3135,9 +3596,11 @@
       "author": null,
       "contributor": null,
       "rationale": "Displayed currency data must expose its source and update time.",
-      "id": "internal_features_finance_spec_source_and_freshness_transparency",
       "community": 10,
-      "norm_label": "source and freshness transparency"
+      "norm_label": "source and freshness transparency",
+      "_origin": "semantic",
+      "id": "internal_features_finance_spec_source_and_freshness_transparency",
+      "community_name": "/dollar all Command"
     },
     {
       "label": "Currency Context",
@@ -3148,9 +3611,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "internal_features_finance_spec_currency_context",
       "community": 10,
-      "norm_label": "currency context"
+      "norm_label": "currency context",
+      "_origin": "semantic",
+      "id": "internal_features_finance_spec_currency_context",
+      "community_name": "/dollar all Command"
     },
     {
       "label": "Update Timestamp",
@@ -3161,9 +3626,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "internal_features_finance_spec_update_timestamp",
       "community": 10,
-      "norm_label": "update timestamp"
+      "norm_label": "update timestamp",
+      "_origin": "semantic",
+      "id": "internal_features_finance_spec_update_timestamp",
+      "community_name": "/dollar all Command"
     },
     {
       "label": "Cat",
@@ -3174,9 +3641,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "assets_images_cat_cat",
       "community": 22,
-      "norm_label": "cat"
+      "norm_label": "cat",
+      "_origin": "semantic",
+      "id": "assets_images_cat_cat",
+      "community_name": "Cat"
     },
     {
       "label": "Close-up Cat Face",
@@ -3187,9 +3656,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "assets_images_cat_close_up_cat_face",
       "community": 22,
-      "norm_label": "close-up cat face"
+      "norm_label": "close-up cat face",
+      "_origin": "semantic",
+      "id": "assets_images_cat_close_up_cat_face",
+      "community_name": "Cat"
     },
     {
       "label": "Cat Reaction Image",
@@ -3200,9 +3671,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "assets_images_cat_reaction_image",
       "community": 22,
-      "norm_label": "cat reaction image"
+      "norm_label": "cat reaction image",
+      "_origin": "semantic",
+      "id": "assets_images_cat_reaction_image",
+      "community_name": "Cat"
     }
   ],
   "links": [
@@ -7023,12 +7496,112 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/spec-template.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_spec_template",
+      "target": "docs_spec_template_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/spec-template.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_spec_template_name",
+      "target": "docs_spec_template_boundaries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/spec-template.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_spec_template_name",
+      "target": "docs_spec_template_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/spec-template.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_spec_template_name",
+      "target": "docs_spec_template_purpose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/spec-template.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_spec_template_name",
+      "target": "docs_spec_template_responsibilities",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/spec-template.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_spec_template_name",
+      "target": "docs_spec_template_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/spec-template.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_spec_template_name",
+      "target": "docs_spec_template_scenarios",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/spec-template.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_spec_template_name",
+      "target": "docs_spec_template_writing_guidelines",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/spec-template.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_spec_template_scenarios",
+      "target": "docs_spec_template_scenario_descriptive_behavior",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".github/workflows/docker-publish.yml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_github_workflows_docker_publish_github_actions_workflow",
       "target": "_github_workflows_docker_publish_main_push_trigger"
     },
@@ -7039,6 +7612,7 @@
       "source_file": "AGENTS.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "agents_md_gatoc_project",
       "target": "_github_workflows_docker_publish_github_actions_workflow"
     },
@@ -7049,6 +7623,7 @@
       "source_file": ".github/workflows/docker-publish.yml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_github_workflows_docker_publish_build_and_push_image_job",
       "target": "_github_workflows_docker_publish_github_container_registry"
     },
@@ -7059,6 +7634,7 @@
       "source_file": ".github/workflows/docker-publish.yml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_github_workflows_docker_publish_build_and_push_image_job",
       "target": "_github_workflows_docker_publish_latest_image_tag"
     },
@@ -7069,6 +7645,7 @@
       "source_file": ".github/workflows/docker-publish.yml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_github_workflows_docker_publish_build_and_push_image_job",
       "target": "_github_workflows_docker_publish_sha_image_tag"
     },
@@ -7079,6 +7656,7 @@
       "source_file": ".github/workflows/docker-publish.yml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_github_workflows_docker_publish_deploy_job",
       "target": "_github_workflows_docker_publish_build_and_push_image_job"
     },
@@ -7089,6 +7667,7 @@
       "source_file": ".github/workflows/docker-publish.yml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_github_workflows_docker_publish_deploy_job",
       "target": "_github_workflows_docker_publish_stack_deploy_action"
     },
@@ -7099,6 +7678,7 @@
       "source_file": ".github/workflows/docker-publish.yml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_github_workflows_docker_publish_stack_deploy_action",
       "target": "docker_stack_yaml_bot_service"
     },
@@ -7109,6 +7689,7 @@
       "source_file": "AGENTS.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "agents_md_discord_bot",
       "target": "agents_md_discordgo"
     },
@@ -7119,6 +7700,7 @@
       "source_file": "AGENTS.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "agents_md_discord_bot",
       "target": "agents_md_gorm"
     },
@@ -7129,6 +7711,7 @@
       "source_file": "AGENTS.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "agents_md_gorm",
       "target": "agents_md_postgres"
     },
@@ -7139,6 +7722,7 @@
       "source_file": "AGENTS.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "agents_md_feature_based_module_system",
       "target": "agents_md_bot_feature_interface"
     },
@@ -7149,6 +7733,7 @@
       "source_file": "AGENTS.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "agents_md_feature_based_module_system",
       "target": "agents_md_manual_feature_registration"
     },
@@ -7159,6 +7744,7 @@
       "source_file": "AGENTS.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "agents_md_feature_owned_gorm_models",
       "target": "agents_md_database_migrate"
     },
@@ -7169,6 +7755,7 @@
       "source_file": "AGENTS.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "agents_md_members_leaf_model_package",
       "target": "agents_md_feature_owned_gorm_models"
     },
@@ -7179,6 +7766,7 @@
       "source_file": "AGENTS.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "agents_md_slash_command",
       "target": "agents_md_router_event_registration"
     },
@@ -7189,6 +7777,7 @@
       "source_file": "AGENTS.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "agents_md_openspec",
       "target": "agents_md_colocated_living_specs"
     },
@@ -7199,6 +7788,7 @@
       "source_file": "AGENTS.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "agents_md_docker_swarm_deployment",
       "target": "docker_stack_yaml_bot_service"
     },
@@ -7209,6 +7799,7 @@
       "source_file": "docker-compose.yaml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "docker_compose_yaml_bot_service",
       "target": "docker_compose_yaml_db_service"
     },
@@ -7219,6 +7810,7 @@
       "source_file": "docker-compose.yaml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "docker_compose_yaml_db_service",
       "target": "docker_compose_yaml_db_data_volume"
     },
@@ -7229,6 +7821,7 @@
       "source_file": "docker-compose.yaml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "docker_compose_yaml_db_service",
       "target": "docker_compose_yaml_discordbot_database"
     },
@@ -7239,6 +7832,7 @@
       "source_file": "docker-compose.yaml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "docker_compose_yaml_db_service",
       "target": "docker_compose_yaml_postgres_latest"
     },
@@ -7249,6 +7843,7 @@
       "source_file": "docker-compose.yaml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "docker_compose_yaml_bot_service",
       "target": "docker_compose_yaml_app_bind_mount"
     },
@@ -7259,6 +7854,7 @@
       "source_file": "docker-compose.yaml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "docker_compose_yaml_bot_service",
       "target": "docker_compose_yaml_dev_build_target"
     },
@@ -7269,6 +7865,7 @@
       "source_file": "docker-compose.yaml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "docker_compose_yaml_bot_service",
       "target": "docker_compose_yaml_env_file"
     },
@@ -7279,6 +7876,7 @@
       "source_file": "docker-stack.yaml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "docker_stack_yaml_bot_service",
       "target": "docker_stack_yaml_bot_network"
     },
@@ -7289,6 +7887,7 @@
       "source_file": "docker-stack.yaml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "docker_stack_yaml_bot_service",
       "target": "docker_stack_yaml_external_swarm_secrets"
     },
@@ -7299,6 +7898,7 @@
       "source_file": "docker-stack.yaml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "docker_stack_yaml_bot_service",
       "target": "docker_stack_yaml_gatoc_container_image"
     },
@@ -7309,6 +7909,7 @@
       "source_file": "docker-stack.yaml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "docker_stack_yaml_bot_service",
       "target": "docker_stack_yaml_secret_file_environment"
     },
@@ -7319,6 +7920,7 @@
       "source_file": "docker-stack.yaml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "docker_stack_yaml_bot_service",
       "target": "docker_stack_yaml_stack_db_service"
     },
@@ -7329,6 +7931,7 @@
       "source_file": "docker-stack.yaml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "docker_stack_yaml_gatoc_container_image",
       "target": "docker_stack_yaml_git_commit_hash_tag"
     },
@@ -7339,6 +7942,7 @@
       "source_file": "docker-stack.yaml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "docker_stack_yaml_stack_db_service",
       "target": "docker_stack_yaml_database_healthcheck"
     },
@@ -7349,6 +7953,7 @@
       "source_file": "docker-stack.yaml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "docker_stack_yaml_stack_db_service",
       "target": "docker_stack_yaml_db_data_volume"
     },
@@ -7359,6 +7964,7 @@
       "source_file": "docker-stack.yaml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "docker_stack_yaml_stack_db_service",
       "target": "docker_stack_yaml_gatoc_bot_database"
     },
@@ -7369,6 +7975,7 @@
       "source_file": "docker-stack.yaml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "docker_stack_yaml_stack_db_service",
       "target": "docker_stack_yaml_postgres_16"
     },
@@ -7379,6 +7986,7 @@
       "source_file": "internal/features/embedfixer/spec.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "internal_features_embedfixer_spec_embedfixer_feature",
       "target": "internal_features_embedfixer_spec_supported_social_platforms"
     },
@@ -7389,6 +7997,7 @@
       "source_file": "internal/features/embedfixer/spec.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "internal_features_embedfixer_spec_supported_social_platforms",
       "target": "internal_features_embedfixer_spec_hardcoded_platform_scope"
     },
@@ -7399,6 +8008,7 @@
       "source_file": "internal/features/embedfixer/spec.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "internal_features_embedfixer_spec_replacement_domain_configuration",
       "target": "internal_features_embedfixer_spec_config_set_command"
     },
@@ -7409,6 +8019,7 @@
       "source_file": "internal/features/embedfixer/spec.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "internal_features_embedfixer_spec_twitter_and_x_hosts",
       "target": "internal_features_embedfixer_spec_replacement_domain_configuration"
     },
@@ -7419,6 +8030,7 @@
       "source_file": "internal/features/embedfixer/spec.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "internal_features_embedfixer_spec_config_show_command",
       "target": "internal_features_embedfixer_spec_source_host_aliases"
     },
@@ -7429,6 +8041,7 @@
       "source_file": "internal/features/embedfixer/spec.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "internal_features_embedfixer_spec_source_host_aliases",
       "target": "internal_features_embedfixer_spec_twitter_and_x_hosts"
     },
@@ -7439,6 +8052,7 @@
       "source_file": "internal/features/embedfixer/spec.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "internal_features_embedfixer_spec_config_set_command",
       "target": "internal_features_embedfixer_spec_custom_replacement_domain"
     },
@@ -7449,6 +8063,7 @@
       "source_file": "internal/features/embedfixer/spec.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "internal_features_embedfixer_spec_config_show_command",
       "target": "internal_features_embedfixer_spec_custom_replacement_domain"
     },
@@ -7459,6 +8074,7 @@
       "source_file": "internal/features/embedfixer/spec.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "internal_features_embedfixer_spec_config_show_command",
       "target": "internal_features_embedfixer_spec_default_replacement_domain"
     },
@@ -7469,6 +8085,7 @@
       "source_file": "internal/features/embedfixer/spec.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "internal_features_embedfixer_spec_deterministic_platform_ordering",
       "target": "internal_features_embedfixer_spec_config_show_command"
     },
@@ -7479,6 +8096,7 @@
       "source_file": "internal/features/embedfixer/spec.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "internal_features_embedfixer_spec_table_like_embed_format",
       "target": "internal_features_embedfixer_spec_config_show_command"
     },
@@ -7489,6 +8107,7 @@
       "source_file": "internal/features/embedfixer/spec.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "internal_features_embedfixer_spec_nofix_bypass_tag",
       "target": "internal_features_embedfixer_spec_embed_suppression"
     },
@@ -7499,6 +8118,7 @@
       "source_file": "internal/features/finance/spec.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "internal_features_finance_spec_finance_feature",
       "target": "internal_features_finance_spec_dollar_all_command"
     },
@@ -7509,6 +8129,7 @@
       "source_file": "internal/features/finance/spec.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "internal_features_finance_spec_dollar_all_command",
       "target": "internal_features_finance_spec_currency_context"
     },
@@ -7519,6 +8140,7 @@
       "source_file": "internal/features/finance/spec.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "internal_features_finance_spec_dollar_all_command",
       "target": "internal_features_finance_spec_eur_exchange_rate_data"
     },
@@ -7529,6 +8151,7 @@
       "source_file": "internal/features/finance/spec.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "internal_features_finance_spec_dollar_all_command",
       "target": "internal_features_finance_spec_update_timestamp"
     },
@@ -7539,6 +8162,7 @@
       "source_file": "internal/features/finance/spec.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "internal_features_finance_spec_dollar_all_command",
       "target": "internal_features_finance_spec_usd_exchange_rate_data"
     },
@@ -7549,6 +8173,7 @@
       "source_file": "internal/features/finance/spec.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "internal_features_finance_spec_partial_failure_tolerance",
       "target": "internal_features_finance_spec_dollar_all_command"
     },
@@ -7559,6 +8184,7 @@
       "source_file": "internal/features/finance/spec.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "internal_features_finance_spec_source_and_freshness_transparency",
       "target": "internal_features_finance_spec_dollar_all_command"
     },
@@ -7569,6 +8195,7 @@
       "source_file": "internal/features/finance/spec.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "internal_features_finance_spec_usd_exchange_rate_data",
       "target": "internal_features_finance_spec_upstream_currency_endpoints"
     },
@@ -7579,6 +8206,7 @@
       "source_file": "internal/features/finance/spec.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "internal_features_finance_spec_eur_exchange_rate_data",
       "target": "internal_features_finance_spec_upstream_currency_endpoints"
     },
@@ -7589,6 +8217,7 @@
       "source_file": "assets/images/cat.gif",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "assets_images_cat_cat",
       "target": "assets_images_cat_close_up_cat_face"
     },
@@ -7599,6 +8228,7 @@
       "source_file": "assets/images/cat.gif",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "assets_images_cat_cat",
       "target": "assets_images_cat_reaction_image"
     }
@@ -7647,5 +8277,5 @@
       "source_file": "docker-stack.yaml"
     }
   ],
-  "built_at_commit": "c291d817c59b104916fa40c18002aa86e79884e8"
+  "built_at_commit": "b5a218423ecb6676d0cdf43e9adfe16fa0b1f5d0"
 }

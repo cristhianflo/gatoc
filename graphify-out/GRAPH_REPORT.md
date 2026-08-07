@@ -1,52 +1,59 @@
-# Graph Report - .  (2026-08-05)
+# Graph Report - gatoc  (2026-08-07)
 
 ## Corpus Check
-- 55 files · ~132,789 words
+- 52 files · ~133,003 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 291 nodes · 387 edges · 52 communities (35 shown, 17 thin omitted)
+- 301 nodes · 396 edges · 54 communities (36 shown, 18 thin omitted)
 - Extraction: 88% EXTRACTED · 12% INFERRED · 0% AMBIGUOUS · INFERRED: 47 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
+## Graph Freshness
+- Built from commit: `b5a21842`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
+
 ## Community Hubs (Navigation)
-- Core Runtime and Data
-- Slash Command Handling
-- Event Router Middleware
-- Bot Context Features
-- Embed Config Service
-- Deployment Infrastructure
-- Currency Rates
-- Bot Builder
-- Embed Message Handler
-- Embedfixer Configuration
-- Finance Dollar Command
-- Local Docker Development
-- Embedfixer Feature Slice
-- Finance Feature Slice
-- Members Feature Slice
-- Ping Feature Slice
-- External Stack
-- Member Data Models
-- Graphify Plugin
-- Docker Publish Workflow
-- Feature Module Contract
-- Database Model Ownership
-- Cat Asset
-- Swarm Secret Deployment
-- Embedfixer Domain Model
-- Platform Support
-- Member Message Types
-- Graphify Runtime Plugin
-- Co-located Specifications
-- Command Event Registration
-- Deployment Script
+- BotBuilder
+- SlashCommand
+- EventRouter
+- BotContext
+- resolveReplacementDomain
+- Stack Bot Service
+- fetchRates
+- bot
+- .EmbedFixerHandler
+- Embedfixer Config Show Command
+- /dollar all Command
+- Compose Bot Service
+- EmbedFixerFeature
+- FinanceFeature
+- MembersFeature
+- PingFeature
+- Discord Bot
+- model/models.go
+- opencode.json
+- GitHub Actions Docker Publish Workflow
+- Feature-Based Module System
+- Feature-Owned GORM Models
+- Cat
+- deploy-secrets.sh
+- EmbedFixerDomainOverride
+- Supported Social Platforms
+- LeaveMessage
+- graphify.js
+- Co-Located Living Specs
+- Router Event Registration
+- deploy.sh
 - Embed Suppression
-- Dollar Status Response
-- Air Hot Reloading
-- Application Entrypoint
-- Verification Checks
-- Go Module Metadata
+- dollar_status.go
+- air Hot Reloading
+- Main App Entrypoint
+- Required Verification Checks
+- github.com/bachacode/gatoc
+- Name
+- ParrotFeature
 
 ## God Nodes (most connected - your core abstractions)
 1. `EventRouter` - 21 edges
@@ -80,107 +87,109 @@
 - **Finance Currency Response** — internal_features_finance_spec_dollar_all_command, internal_features_finance_spec_usd_exchange_rate_data, internal_features_finance_spec_eur_exchange_rate_data, internal_features_finance_spec_currency_context [EXTRACTED 1.00]
 - **gatoc Runtime Deployment Stack** — docker_stack_yaml_bot_service, docker_stack_yaml_stack_db_service, docker_stack_yaml_bot_network, docker_stack_yaml_external_swarm_secrets [EXTRACTED 1.00]
 
-## Communities (52 total, 17 thin omitted)
+## Communities (54 total, 18 thin omitted)
 
-### Community 0 - "Core Runtime and Data"
-Cohesion: 0.11
-Nodes (16): bot, main(), BotConfig, Config, DbConfig, RedisConfig, Context, Intent (+8 more)
+### Community 0 - "BotBuilder"
+Cohesion: 0.10
+Nodes (19): BotBuilder, Feature, main(), BotConfig, Config, DbConfig, RedisConfig, Client (+11 more)
 
-### Community 1 - "Slash Command Handling"
+### Community 1 - "SlashCommand"
 Cohesion: 0.19
 Nodes (20): ApplicationCommand, ApplicationCommandInteractionDataOption, ApplicationCommandOption, SlashCommand, SlashSubcommand, DeferReply(), EditDeferred(), GetInteractionFailedResponse() (+12 more)
 
-### Community 2 - "Event Router Middleware"
-Cohesion: 0.16
-Nodes (10): EventRouter, GuildMemberAddMiddleware, GuildMemberRemoveMiddleware, InteractionCreateMiddleware, MessageCreateMiddleware, MessageReactionAddMiddleware, ReadyMiddleware, NewEventRouter() (+2 more)
+### Community 2 - "EventRouter"
+Cohesion: 0.26
+Nodes (8): EventRouter, GuildMemberAddMiddleware, GuildMemberRemoveMiddleware, InteractionCreateMiddleware, MessageCreateMiddleware, MessageReactionAddMiddleware, ReadyMiddleware, NewEventRouter()
 
-### Community 3 - "Bot Context Features"
-Cohesion: 0.15
+### Community 3 - "BotContext"
+Cohesion: 0.16
 Nodes (13): BotContext, GuildMemberAdd, GuildMemberRemove, Client, DB, Logger, MembersFeature, MessageCreate (+5 more)
 
-### Community 4 - "Embed Config Service"
+### Community 4 - "resolveReplacementDomain"
 Cohesion: 0.20
 Nodes (16): platformConfig, activeDomain(), getCustomDomain(), DB, normalizeDomainHost(), resetCustomDomain(), resolveReplacementDomain(), setCustomDomain() (+8 more)
 
-### Community 5 - "Deployment Infrastructure"
+### Community 5 - "Stack Bot Service"
 Cohesion: 0.11
 Nodes (18): Build and Push Image Job, Deploy Job, GitHub Container Registry, Latest Docker Image Tag, Commit SHA Docker Image Tag, Docker Stack Deploy Action, Docker Swarm Deployment, Bot Overlay Network (+10 more)
 
-### Community 6 - "Currency Rates"
+### Community 6 - "fetchRates"
 Cohesion: 0.21
 Nodes (12): fetchRates(), formatRateFields(), Client, T, TestFetchRatesArrayResponse(), TestFetchRatesFailureResponse(), TestFetchRatesSingleObjectResponse(), TestFormatRateFields() (+4 more)
 
-### Community 7 - "Bot Builder"
-Cohesion: 0.20
-Nodes (7): BotBuilder, Feature, Client, DB, Intent, Logger, NewBotBuilder()
+### Community 7 - "bot"
+Cohesion: 0.27
+Nodes (4): bot, Context, Intent, Session
 
-### Community 8 - "Embed Message Handler"
+### Community 8 - ".EmbedFixerHandler"
 Cohesion: 0.23
 Nodes (9): buildFixedEmbedMessage(), fixedURLFromDomain(), EmbedFixerFeature, MessageCreate, Session, hasNoFixTag(), T, TestEmbedFixerCommandIncludesNoFixSubcommand() (+1 more)
 
-### Community 9 - "Embedfixer Configuration"
+### Community 9 - "Embedfixer Config Show Command"
 Cohesion: 0.25
 Nodes (9): Embedfixer Config Set Command, Embedfixer Config Show Command, Custom Replacement Domain, Default Replacement Domain, Deterministic Platform Ordering, Replacement Domain Configuration, Source Host Aliases, Table-Like Embed Format (+1 more)
 
-### Community 10 - "Finance Dollar Command"
+### Community 10 - "/dollar all Command"
 Cohesion: 0.25
 Nodes (9): Currency Context, /dollar all Command, EUR Exchange-Rate Data, finance Feature, Partial Upstream Failure Tolerance, Source and Freshness Transparency, Update Timestamp, Upstream Currency Endpoints (+1 more)
 
-### Community 11 - "Local Docker Development"
+### Community 11 - "Compose Bot Service"
 Cohesion: 0.25
 Nodes (8): App Bind Mount, Compose Bot Service, Compose Database Volume, Compose Database Service, Development Build Target, discordbot Database, .env File, Postgres Latest Image
 
-### Community 16 - "External Stack"
+### Community 16 - "Discord Bot"
 Cohesion: 0.50
 Nodes (4): Discord Bot, discordgo, GORM, Postgres
 
-### Community 17 - "Member Data Models"
+### Community 17 - "model/models.go"
 Cohesion: 0.67
 Nodes (3): Model, ResponseMessage, WelcomeRole
 
-### Community 18 - "Graphify Plugin"
+### Community 18 - "opencode.json"
 Cohesion: 0.50
 Nodes (3): plugin, $schema, .opencode/plugins/graphify.js
 
-### Community 19 - "Docker Publish Workflow"
+### Community 19 - "GitHub Actions Docker Publish Workflow"
 Cohesion: 0.67
 Nodes (3): GitHub Actions Docker Publish Workflow, Main Branch Push Trigger, gatoc Project
 
-### Community 20 - "Feature Module Contract"
+### Community 20 - "Feature-Based Module System"
 Cohesion: 0.67
 Nodes (3): bot.Feature Interface, Feature-Based Module System, Manual Feature Registration
 
-### Community 21 - "Database Model Ownership"
+### Community 21 - "Feature-Owned GORM Models"
 Cohesion: 0.67
 Nodes (3): Database Migrate, Feature-Owned GORM Models, Members Leaf Model Package
 
-### Community 22 - "Cat Asset"
+### Community 22 - "Cat"
 Cohesion: 0.67
 Nodes (3): Cat, Close-up Cat Face, Cat Reaction Image
 
-### Community 25 - "Platform Support"
+### Community 25 - "Supported Social Platforms"
 Cohesion: 0.67
 Nodes (3): embedfixer Feature, Hardcoded Platform Scope, Supported Social Platforms
 
+### Community 52 - "Name"
+Cohesion: 0.20
+Nodes (9): Boundaries, Dependencies, Name, Purpose, Responsibilities, Rules, Scenario: Descriptive behavior, Scenarios (+1 more)
+
 ## Knowledge Gaps
-- **57 isolated node(s):** `$schema`, `.opencode/plugins/graphify.js`, `deploy-secrets.sh script`, `SECRETS`, `deploy.sh script` (+52 more)
+- **64 isolated node(s):** `$schema`, `.opencode/plugins/graphify.js`, `deploy-secrets.sh script`, `SECRETS`, `deploy.sh script` (+59 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **17 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `BotContext` connect `Bot Context Features` to `Core Runtime and Data`, `Slash Command Handling`, `Embed Message Handler`?**
-  _High betweenness centrality (0.165) - this node is a cross-community bridge._
-- **Why does `SlashCommand` connect `Slash Command Handling` to `Core Runtime and Data`, `Event Router Middleware`, `Bot Context Features`, `Bot Builder`, `Embedfixer Feature Slice`, `Finance Feature Slice`, `Members Feature Slice`, `Ping Feature Slice`?**
-  _High betweenness centrality (0.095) - this node is a cross-community bridge._
-- **Why does `bot` connect `Core Runtime and Data` to `Slash Command Handling`, `Event Router Middleware`, `Bot Context Features`?**
-  _High betweenness centrality (0.079) - this node is a cross-community bridge._
+- **Why does `BotContext` connect `BotContext` to `BotBuilder`, `SlashCommand`, `.EmbedFixerHandler`, `bot`?**
+  _High betweenness centrality (0.154) - this node is a cross-community bridge._
+- **Why does `SlashCommand` connect `SlashCommand` to `BotBuilder`, `BotContext`, `bot`, `EmbedFixerFeature`, `FinanceFeature`, `MembersFeature`, `PingFeature`, `ParrotFeature`?**
+  _High betweenness centrality (0.089) - this node is a cross-community bridge._
+- **Why does `bot` connect `bot` to `BotBuilder`, `SlashCommand`, `EventRouter`, `BotContext`?**
+  _High betweenness centrality (0.074) - this node is a cross-community bridge._
 - **What connects `$schema`, `.opencode/plugins/graphify.js`, `deploy-secrets.sh script` to the rest of the system?**
-  _57 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Core Runtime and Data` be split into smaller, more focused modules?**
-  _Cohesion score 0.11396011396011396 - nodes in this community are weakly interconnected._
-- **Should `Bot Context Features` be split into smaller, more focused modules?**
-  _Cohesion score 0.14736842105263157 - nodes in this community are weakly interconnected._
-- **Should `Deployment Infrastructure` be split into smaller, more focused modules?**
+  _64 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `BotBuilder` be split into smaller, more focused modules?**
+  _Cohesion score 0.09879032258064516 - nodes in this community are weakly interconnected._
+- **Should `Stack Bot Service` be split into smaller, more focused modules?**
   _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._

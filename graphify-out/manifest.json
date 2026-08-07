@@ -5,7 +5,7 @@
     "semantic_hash": "e5f74d14a81702b55bdf53b33ec991d7"
   },
   ".opencode/plugins/graphify.js": {
-    "mtime": 1785979165.9240072,
+    "mtime": 1785980817.6182446,
     "ast_hash": "3ea725724bc8ebe483c9f13d6aa1124f",
     "semantic_hash": "3ea725724bc8ebe483c9f13d6aa1124f"
   },
@@ -245,9 +245,9 @@
     "semantic_hash": "df7398ed97af07fbee20272159931a4c"
   },
   "AGENTS.md": {
-    "mtime": 1785718972.2994893,
-    "ast_hash": "6a1f23a6596452206b423f39fe11112a",
-    "semantic_hash": "6a1f23a6596452206b423f39fe11112a"
+    "mtime": 1786141252.9773672,
+    "ast_hash": "dab92d0b6e966ca813b1016ba72e8f82",
+    "semantic_hash": ""
   },
   "docker-compose.yaml": {
     "mtime": 1780528437.380997,
@@ -260,18 +260,23 @@
     "semantic_hash": "d0bc90060aa4729813cfba70429c1703"
   },
   "internal/features/embedfixer/spec.md": {
-    "mtime": 1785719361.7056615,
-    "ast_hash": "8363c8b9f51a94f7eae1125a6bf97beb",
-    "semantic_hash": "8363c8b9f51a94f7eae1125a6bf97beb"
+    "mtime": 1786141290.6209044,
+    "ast_hash": "45bf416cdf679809b0f8d675fa2c5337",
+    "semantic_hash": ""
   },
   "internal/features/finance/spec.md": {
-    "mtime": 1785718914.319017,
-    "ast_hash": "eac24ee915e7c74dca23ba296fce4450",
-    "semantic_hash": "eac24ee915e7c74dca23ba296fce4450"
+    "mtime": 1786141290.6279047,
+    "ast_hash": "3692cff18c5dbffe33b22e584799501d",
+    "semantic_hash": ""
   },
   "assets/images/cat.gif": {
     "mtime": 1780528437.3788586,
     "ast_hash": "6261a510eec0d23d063ce017a802b301",
     "semantic_hash": "6261a510eec0d23d063ce017a802b301"
+  },
+  "docs/spec-template.md": {
+    "mtime": 1786141253.0003676,
+    "ast_hash": "36fb905a9287981906b19b556c08b99a",
+    "semantic_hash": ""
   }
 }
