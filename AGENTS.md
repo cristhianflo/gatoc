@@ -36,24 +36,27 @@ Do NOT claim a task is complete without running the checks above and confirming 
 
 ## SDD Workflow (Spec-Driven Development)
 
-This project uses **OpenSpec** for proposal/design/tasks scaffolding and spec deltas, with **co-located living specs** (one per feature module). OpenSpec's `openspec/specs/` management is retired; living specs live at `internal/features/<feature>/spec.md`.
+This project uses simple, co-located Markdown specs for features and architectural subsystems. An architectural subsystem is a shared core package such as `internal/bot`, `internal/database`, or `internal/config`. A feature is a user-facing capability under `internal/features/<name>`.
 
-The rhythm for any non-trivial change:
+Specs live beside the package they describe:
 
-1. **Explore** *(optional)* — `/opsx:explore` as a thinking partner for uncertain changes. Skip for trivial fixes.
-2. **Propose** — `/opsx:propose <change-name>` generates `openspec/changes/<change>/` with `proposal.md`, `design.md`, `tasks.md`, and a spec delta at `openspec/changes/<change>/specs/<feature>/spec.md` (ADDED/MODIFIED/REMOVED). **Nothing is implemented until the plan is reviewed and approved.** The delta directory MUST be named after the **feature**, not a capability.
-3. **Apply** — implement `tasks.md` items one at a time. **A task may only be marked `[x]` after the 4 verification checks in "Testing & Debugging" pass** (build, vet, gofmt clean, tests green). This makes the SDD evidence-based, not trust-based.
-4. **Co-located sync** *(mandatory before archive)* — apply the change's spec delta into the feature's living spec at `internal/features/<feature>/spec.md`:
-   - If the feature has no living spec yet (new feature, or first change touching it), create `internal/features/<feature>/spec.md` from the delta's `ADDED` section.
-   - If it exists, merge the delta by hand: apply `ADDED`/`MODIFIED` requirements and scenarios, remove `REMOVED` ones, keep one `## Purpose` section. The result is the new post-change reality of the feature.
-   - This step replaces OpenSpec's auto-merge (which targeted the retired `openspec/specs/`). It is the mandatory control that keeps co-located specs from going stale.
-5. **Archive** — `/opsx:archive <change> --skip-specs`. The `--skip-specs` flag is REQUIRED (OpenSpec's merge would target the non-existent `openspec/specs/`). The archived `openspec/changes/archive/<date>-<change>/specs/<feature>/spec.md` delta remains as provenance — the diff that produced this change.
+- Architectural subsystem: `internal/<package>/spec.md`
+- Feature: `internal/features/<name>/spec.md`
 
-### OpenSpec config
-`openspec/config.yaml` injects project context (tech stack, model-ownership convention, co-located-spec rule) and per-artifact rules into every generated artifact. Keep `context:` accurate; it shapes every proposal/design/spec the AI writes.
+Each package has at most one `spec.md`. Use `docs/spec-template.md` when creating a new spec. Specs should describe responsibilities, observable behavior, constraints, boundaries, and important dependencies in clear natural language. EARS keywords such as `SHALL` are not required.
 
-### Don't backfill
-Only write a feature's living spec when a real change touches it. Do NOT spec features that haven't been changed (e.g. `members`, `parrot`, `ping` have no spec today — they get one on their next real change). Backfilling spec for untouched code rots.
+For concrete behavior, edge cases, and failure behavior, prefer readable `GIVEN`, `WHEN`, and `THEN` scenarios. Use scenarios when they clarify behavior or provide a useful basis for tests; do not force every statement into a scenario.
+
+The rhythm for a non-trivial change:
+
+1. Identify the affected feature or architectural subsystem.
+2. Read its existing `spec.md`, or create one from `docs/spec-template.md` if the package does not have one.
+3. Update the spec before implementation when the change introduces or alters behavior. Review the plan before coding when the change is substantial.
+4. Implement the change against the documented behavior.
+5. Update the spec in the same change if implementation reality differs from the plan. Add or update scenarios for important user-visible behavior, edge cases, and failures.
+6. Run all checks in **Testing & Debugging**. Do not claim completion until the code, spec, and verification results are consistent.
+
+Formatting-only changes, behavior-preserving refactors, and test-only changes may skip spec updates. Do not backfill specs for untouched packages.
 
 ## Entrypoints & Infrastructure
 
