@@ -1,6 +1,7 @@
 package subcommands
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -10,6 +11,7 @@ import (
 	"time"
 
 	"github.com/bachacode/gatoc/internal/bot"
+	"github.com/bachacode/gatoc/internal/imagegen"
 	"github.com/bwmarrin/discordgo"
 )
 
@@ -84,6 +86,69 @@ func formatRateFields(rate DolarResponse) ([]*discordgo.MessageEmbedField, error
 	}, nil
 }
 
+// replyRatesEmbed responds with the embed-based representation of the rates.
+// It is kept as a fallback in case image generation fails.
+func replyRatesEmbed(s *discordgo.Session, i *discordgo.InteractionCreate, results map[string]currencyRatesResult, unavailable []string) error {
+	var embedFields []*discordgo.MessageEmbedField
+
+	for _, currency := range []string{"USD", "EUR"} {
+		result, ok := results[currency]
+		if !ok || result.Err != nil {
+			continue
+		}
+
+		for _, rate := range result.Rates {
+			if currency == "USD" && strings.EqualFold(rate.Name, "Bitcoin") {
+				continue
+			}
+
+			fields, err := formatRateFields(rate)
+			if err != nil {
+				continue
+			}
+
+			embedFields = append(embedFields, fields...)
+			embedFields = append(embedFields, &discordgo.MessageEmbedField{
+				Name:   "\u200b",
+				Value:  "\u200b",
+				Inline: false,
+			})
+		}
+	}
+
+	if len(embedFields) > 0 {
+		embedFields = embedFields[:len(embedFields)-1]
+	}
+
+	if len(embedFields) == 0 {
+		bot.EditDeferred(s, i, "No se pudo obtener cotizaciones en este momento.")
+		return fmt.Errorf("all upstream sources failed")
+	}
+
+	description := "Cotización del Dólar (Oficial/Paralelo) y Euro Oficial en Venezuela"
+	if len(unavailable) > 0 {
+		description = fmt.Sprintf("%s\n\nNo disponible temporalmente: %s", description, strings.Join(unavailable, ", "))
+	}
+
+	embed := &discordgo.MessageEmbed{
+		Title:       "Cotización",
+		Description: description,
+		Color:       0x00ff00,
+		Fields:      embedFields,
+	}
+
+	if _, err := s.InteractionResponseEdit(i.Interaction, &discordgo.WebhookEdit{
+		Embeds: &[]*discordgo.MessageEmbed{
+			embed,
+		},
+	}); err != nil {
+		bot.GetInteractionFailedResponse(s, i, "")
+		return fmt.Errorf("Error responding to interaction: %v", err)
+	}
+
+	return nil
+}
+
 var DollarAll bot.SlashSubcommand = bot.SlashSubcommand{
 	Metadata: &discordgo.ApplicationCommandOption{
 		Type:        discordgo.ApplicationCommandOptionSubCommand,
@@ -120,65 +185,28 @@ var DollarAll bot.SlashSubcommand = bot.SlashSubcommand{
 		}
 
 		wg.Wait()
-		var embedFields []*discordgo.MessageEmbedField
-		var unavailable []string
+		cards, unavailable := buildCardOptions(results)
 
-		for _, currency := range []string{"USD", "EUR"} {
-			result, ok := results[currency]
-			if !ok || result.Err != nil {
-				unavailable = append(unavailable, currency)
-				continue
-			}
-
-			for _, rate := range result.Rates {
-				if currency == "USD" && strings.EqualFold(rate.Name, "Bitcoin") {
-					continue
-				}
-
-				fields, err := formatRateFields(rate)
-				if err != nil {
-					unavailable = append(unavailable, currency)
-					break
-				}
-
-				embedFields = append(embedFields, fields...)
-				embedFields = append(embedFields, &discordgo.MessageEmbedField{
-					Name:   "\u200b",
-					Value:  "\u200b",
-					Inline: false,
-				})
-			}
-		}
-
-		if len(embedFields) > 0 {
-			embedFields = embedFields[:len(embedFields)-1]
-		}
-
-		if len(embedFields) == 0 {
+		if len(cards) == 0 {
 			bot.EditDeferred(s, i, "No se pudo obtener cotizaciones en este momento.")
 			return fmt.Errorf("all upstream sources failed")
 		}
 
-		description := "Cotización del Dólar (Oficial/Paralelo) y Euro Oficial en Venezuela"
-		if len(unavailable) > 0 {
-			description = fmt.Sprintf("%s\n\nNo disponible temporalmente: %s", description, strings.Join(unavailable, ", "))
-		}
-
-		embed := &discordgo.MessageEmbed{
-			Title:       "Cotización",
-			Description: description,
-			Color:       0x00ff00,
-			Fields:      embedFields,
+		pngBytes, err := imagegen.RenderCardList(buildCardListOptions(cards, unavailable))
+		if err != nil {
+			return replyRatesEmbed(s, i, results, unavailable)
 		}
 
 		if _, err := s.InteractionResponseEdit(i.Interaction, &discordgo.WebhookEdit{
-			Embeds: &[]*discordgo.MessageEmbed{
-				embed,
+			Files: []*discordgo.File{
+				{
+					Name:   "cotizaciones.png",
+					Reader: bytes.NewReader(pngBytes),
+				},
 			},
 		}); err != nil {
 			bot.GetInteractionFailedResponse(s, i, "")
 			return fmt.Errorf("Error responding to interaction: %v", err)
-
 		}
 
 		return nil
