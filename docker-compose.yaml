@@ -1,12 +1,12 @@
 services:
   db:
-    image: postgres:latest
+    image: postgres:18
     environment:
       POSTGRES_DB: discordbot
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
     volumes:
-      - db_data:/var/lib/postgresql/data
+      - db_data:/var/lib/postgresql
     ports:
       - "5432:5432"
   bot:
@@ -18,7 +18,9 @@ services:
     env_file:
       - .env
     volumes:
-      - ./:/app
+      - ./:/app:z
+  redis:
+    image: redis:8
 
 volumes:
   db_data:
