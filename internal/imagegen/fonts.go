@@ -41,5 +41,5 @@ func loadFonts() (*truetype.Font, *truetype.Font, error) {
 }
 
 func newFace(f *truetype.Font, size float64) font.Face {
-	return truetype.NewFace(f, &truetype.Options{Size: size, DPI: 72})
+	return truetype.NewFace(f, &truetype.Options{Size: size, DPI: 72, Hinting: font.HintingFull})
 }
